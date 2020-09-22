@@ -1,0 +1,11 @@
+[t66]
+FileName1=t66_periodicReport-d7d9353e8fb7cc172ac9a0cf79dc2731.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/app/configuration/periodicReport-d7d9353e8fb7cc172ac9a0cf79dc2731.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_66.xml
+RequestHeaderFile=t66_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t66_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

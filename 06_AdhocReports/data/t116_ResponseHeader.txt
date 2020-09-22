@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+Date: Thu, 10 Sep 2020 12:57:05 GMT
+Content-Type: text/css;charset=UTF-8
+Content-Length: 8661
+Connection: keep-alive
+X-Frame-Options: DENY
+Last-Modified: Tue, 08 Sep 2020 09:00:52 GMT
+ETag: "tinymce/skins/lightgray/skin.min-27829e218ef3e346f33d88127bb326b3.css"
+Vary: Accept-Encoding
+Cache-Control: no-cache
+Content-Encoding: gzip
+

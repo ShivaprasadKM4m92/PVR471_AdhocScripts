@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+Date: Thu, 10 Sep 2020 12:56:31 GMT
+Content-Type: text/css;charset=UTF-8
+Content-Length: 404
+Connection: keep-alive
+X-Frame-Options: DENY
+Last-Modified: Tue, 08 Sep 2020 08:59:50 GMT
+ETag: "theme_gradient_blue-e5b680b16e6c806c1a9a9ae4ce7afc98.css"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+

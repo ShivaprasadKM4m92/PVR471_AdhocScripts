@@ -1,0 +1,11 @@
+[t70]
+FileName1=t70_copyPasteModal-e538fdadfa9bb40beefda62316b6268f.css
+URL1=https://pvr-perf.rxlogix.com/reports/assets/copyPasteModal-e538fdadfa9bb40beefda62316b6268f.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_70.xml
+RequestHeaderFile=t70_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t70_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

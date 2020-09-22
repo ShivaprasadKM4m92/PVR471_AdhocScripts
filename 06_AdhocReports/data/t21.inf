@@ -1,0 +1,11 @@
+[t21]
+FileName1=t21_rxapplication-a4c64b62daed34952a91343c7b3f69bd.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/app/rxapplication-a4c64b62daed34952a91343c7b3f69bd.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_21.xml
+RequestHeaderFile=t21_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t21_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,11 @@
+[t81]
+FileName1=t81_dictionary-utils-ef4323deede5f1397600e557dd3fbaf5.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/dictionary-utils-ef4323deede5f1397600e557dd3fbaf5.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_81.xml
+RequestHeaderFile=t81_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t81_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
