@@ -1,0 +1,11 @@
+[t75]
+FileName1=t75_emailConfiguration-59c065e4239f87a883e747de81101001.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/app/configuration/emailConfiguration-59c065e4239f87a883e747de81101001.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_75.xml
+RequestHeaderFile=t75_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t75_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

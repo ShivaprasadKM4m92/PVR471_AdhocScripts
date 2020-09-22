@@ -1,0 +1,11 @@
+[t19]
+FileName1=t19_theme_gradient_blue-e5b680b16e6c806c1a9a9ae4ce7afc98.css
+URL1=https://pvr-perf.rxlogix.com/reports/assets/theme_gradient_blue-e5b680b16e6c806c1a9a9ae4ce7afc98.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_19.xml
+RequestHeaderFile=t19_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t19_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

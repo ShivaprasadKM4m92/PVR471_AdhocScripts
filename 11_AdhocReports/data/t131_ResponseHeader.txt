@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+Date: Thu, 10 Sep 2020 13:02:05 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Frame-Options: DENY
+X-Application-Context: application:production:9090
+Content-Encoding: gzip
+Vary: Accept-Encoding
+

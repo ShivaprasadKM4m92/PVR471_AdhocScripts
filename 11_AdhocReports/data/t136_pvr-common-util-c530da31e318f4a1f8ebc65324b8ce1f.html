@@ -1,0 +1,4 @@
+//# sourceMappingURL=pvr-common-util.js.map
+var pvr=pvr||{};
+pvr.common_util=function(){var f=function(){return"/reports"},d=function(){return f()+"/assets/app"},b=function(a,e){b.tmpl_cache||(b.tmpl_cache={});if(!b.tmpl_cache[a]){var c=d()+"/hbs-templates",g="";$.ajax({url:c+"/"+a+".hbs",method:"GET",async:!1,success:function(a){g=a}});b.tmpl_cache[a]=Handlebars.compile(g)}return b.tmpl_cache[a](e)},c=function(a){c.tmpl_cache||(c.tmpl_cache={});if(!c.tmpl_cache[a]){var e=d()+"/hbs-templates",b="";$.ajax({url:e+"/"+a+".hbs",method:"GET",async:!1,success:function(a){b=
+a}});c.tmpl_cache[a]=b}return c.tmpl_cache[a]};return{base_url:f,base_assets_url:d,render_tmpl:b,hbs_partial:c,preserve_line_break:function(a){return a.replace(/\n/g,"<br>").replace(/  /g,"&nbsp; ")},downloadFile:function(a){var b=document.createElement("a");document.body.appendChild(b);b.href=a;b.click()}}}();

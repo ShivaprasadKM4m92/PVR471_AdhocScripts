@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+Date: Thu, 10 Sep 2020 12:56:35 GMT
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 92945
+Connection: keep-alive
+X-Frame-Options: DENY
+Last-Modified: Tue, 08 Sep 2020 09:01:32 GMT
+ETag: "gridstack/gridstack.min-157675a5f94f1a18234a494030c5d8f0.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+
