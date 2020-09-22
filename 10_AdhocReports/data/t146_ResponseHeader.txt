@@ -1,0 +1,13 @@
+HTTP/1.1 101 
+Date: Thu, 10 Sep 2020 13:02:22 GMT
+Connection: upgrade
+X-Frame-Options: DENY
+X-Application-Context: application:production:9090
+Upgrade: websocket
+Sec-WebSocket-Accept: mnf2CTbrFFiHrYRoxYN14YwpCB0=
+Sec-WebSocket-Extensions: permessage-deflate;client_max_window_bits=15
+Cache-Control: no-cache, no-store
+Pragma: no-cache
+X-XSS-Protection: 1
+X-Content-Type-Options: nosniff
+

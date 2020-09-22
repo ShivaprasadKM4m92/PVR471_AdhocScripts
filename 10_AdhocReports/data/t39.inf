@@ -1,0 +1,11 @@
+[t39]
+FileName1=t39_highcharts-3d-b0c0c823b44f85cb61361491f4353576.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/highcharts/highcharts-3d-b0c0c823b44f85cb61361491f4353576.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_39.xml
+RequestHeaderFile=t39_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t39_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

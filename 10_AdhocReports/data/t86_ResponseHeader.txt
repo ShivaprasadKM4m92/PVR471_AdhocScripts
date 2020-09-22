@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+Date: Thu, 10 Sep 2020 12:56:58 GMT
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 372
+Connection: keep-alive
+X-Frame-Options: DENY
+Last-Modified: Tue, 08 Sep 2020 09:03:36 GMT
+ETag: "plugin/dictionary/studyDrugs-9650caca7b2eaad47de57af7bbefe066.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+

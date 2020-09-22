@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+Date: Thu, 10 Sep 2020 13:02:17 GMT
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 456
+Connection: keep-alive
+X-Frame-Options: DENY
+Last-Modified: Tue, 08 Sep 2020 09:03:06 GMT
+ETag: "app/utils/pvr-common-util-c530da31e318f4a1f8ebc65324b8ce1f.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+

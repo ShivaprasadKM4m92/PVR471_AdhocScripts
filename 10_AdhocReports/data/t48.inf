@@ -1,0 +1,11 @@
+[t48]
+FileName1=t48_fullcalendar.print-5e9985f0185898b586ec4820f63bb446.css
+URL1=https://pvr-perf.rxlogix.com/reports/assets/fullcalendar.print-5e9985f0185898b586ec4820f63bb446.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_48.xml
+RequestHeaderFile=t48_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t48_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

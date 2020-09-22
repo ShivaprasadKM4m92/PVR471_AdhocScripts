@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+Date: Thu, 10 Sep 2020 12:56:58 GMT
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 1253
+Connection: keep-alive
+X-Frame-Options: DENY
+Last-Modified: Tue, 08 Sep 2020 09:03:10 GMT
+ETag: "app/emailAttachmentSplit-132f6f5b7d381a44835f915e98384f12.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+
