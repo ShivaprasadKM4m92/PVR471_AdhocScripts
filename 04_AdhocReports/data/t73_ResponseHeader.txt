@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+Date: Thu, 10 Sep 2020 12:56:57 GMT
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 1837
+Connection: keep-alive
+X-Frame-Options: DENY
+Last-Modified: Tue, 08 Sep 2020 09:02:46 GMT
+ETag: "app/configuration/copyPasteValues-3ece0aca4da1adbba99a58d4936d46de.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+

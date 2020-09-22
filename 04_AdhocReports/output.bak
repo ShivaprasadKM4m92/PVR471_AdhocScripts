@@ -1,0 +1,27 @@
+Start auto log messages stack - Iteration 2.
+Action.c(664): Registering web_url("info") was successful  	[MsgId: MMSG-26390]
+Action.c(679): web_url("dataTables_en.json") started  	[MsgId: MMSG-26355]
+Action.c(679): Registering web_url("dataTables_en.json") was successful  	[MsgId: MMSG-26390]
+Action.c(691): web_url("latestPeriodicReport") started  	[MsgId: MMSG-26355]
+Action.c(691): Registering web_url("latestPeriodicReport") was successful  	[MsgId: MMSG-26390]
+Action.c(705): web_url("dataTables_en.json_2") started  	[MsgId: MMSG-26355]
+Action.c(705): Registering web_url("dataTables_en.json_2") was successful  	[MsgId: MMSG-26390]
+Action.c(739): web_concurrent_end started  	[MsgId: MMSG-26355]
+Action.c(503): Error -26610: HTTP Status-Code=502 (Bad Gateway) for "https://pvr-perf.rxlogix.com/reports/assets/i18n/en.json"   [issued at Action.c(739)]  	[MsgId: MERR-26610]
+Action.c(691): Error -26610: HTTP Status-Code=502 (Bad Gateway) for "https://pvr-perf.rxlogix.com/reports/periodicReportConfigurationRest/latestPeriodicReport?length=4&start=0"   [issued at Action.c(739)]  	[MsgId: MERR-26610]
+Action.c(629): Error -26610: HTTP Status-Code=502 (Bad Gateway) for "https://pvr-perf.rxlogix.com/reports/actionItemRest/index?length=5&start=0&sort=dueDate&direction=asc"   [issued at Action.c(739)]  	[MsgId: MERR-26610]
+Action.c(705): Error -26610: HTTP Status-Code=502 (Bad Gateway) for "https://pvr-perf.rxlogix.com/reports/assets/i18n/dataTables_en.json?_=1599742596789"   [issued at Action.c(739)]  	[MsgId: MERR-26610]
+End auto log messages stack.
+
+Start auto log messages stack - Iteration 3.
+Action.c(59): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
+Action.c(69): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(69): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(73): web_url("reports") started  	[MsgId: MMSG-26355]
+Action.c(73): Redirecting "https://pvr-perf.rxlogix.com/reports" (redirection depth is 0)  	[MsgId: MMSG-26694]
+Action.c(73): To location "https://pvr-perf.rxlogix.com/reports/"  	[MsgId: MMSG-26693]
+Action.c(73): Redirecting "https://pvr-perf.rxlogix.com/reports/" (redirection depth is 1)  	[MsgId: MMSG-26694]
+Action.c(73): To location "https://pvr-perf.rxlogix.com/reports/dashboard/index"  	[MsgId: MMSG-26693]
+Action.c(73): Error -35061: No match found for the requested parameter "CsrfTokenId1". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 256 bytes. The total length of the response is 91048 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-35061]
+End auto log messages stack.
+

@@ -1,0 +1,11 @@
+[t32]
+FileName1=t32_workFlow-3b78500b81fd61ce5b59cc202a54e63c.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/app/workFlow-3b78500b81fd61ce5b59cc202a54e63c.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_32.xml
+RequestHeaderFile=t32_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t32_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

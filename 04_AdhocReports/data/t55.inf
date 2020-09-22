@@ -1,0 +1,11 @@
+[t55]
+FileName1=t55_dataTables_en.json
+URL1=https://pvr-perf.rxlogix.com/reports/assets/i18n/dataTables_en.json
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_55.xml
+RequestHeaderFile=t55_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t55_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

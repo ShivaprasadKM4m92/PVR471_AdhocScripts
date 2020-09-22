@@ -1,0 +1,11 @@
+[t26]
+FileName1=t26_fuelux-b7cf5c5c681fcdbd63156284516c90e9.css
+URL1=https://pvr-perf.rxlogix.com/reports/assets/fuelux-b7cf5c5c681fcdbd63156284516c90e9.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_26.xml
+RequestHeaderFile=t26_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t26_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
