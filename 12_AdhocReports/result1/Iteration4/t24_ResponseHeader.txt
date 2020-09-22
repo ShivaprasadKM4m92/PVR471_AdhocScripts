@@ -1,0 +1,12 @@
+HTTP/2.0 200
+Status: 200
+date: Thu, 17 Sep 2020 10:52:24 GMT
+content-type: text/html;charset=UTF-8
+content-length: 25982
+x-frame-options: DENY
+last-modified: Thu, 17 Sep 2020 03:08:04 GMT
+etag: "plugin/dictionary/polymer-dd87a5cf24b5937b70d0c3c0464d82e3.html"
+vary: Accept-Encoding
+cache-control: no-cache
+content-encoding: gzip
+

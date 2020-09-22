@@ -1,0 +1,12 @@
+HTTP/2.0 200
+Status: 200
+date: Thu, 17 Sep 2020 10:52:02 GMT
+content-type: text/html;charset=UTF-8
+content-length: 4251
+x-frame-options: DENY
+last-modified: Thu, 17 Sep 2020 03:07:56 GMT
+etag: "plugin/dictionary/polymer-micro-0c3678e50857ddb532ff7c8ce13cf1be.html"
+vary: Accept-Encoding
+cache-control: no-cache
+content-encoding: gzip
+

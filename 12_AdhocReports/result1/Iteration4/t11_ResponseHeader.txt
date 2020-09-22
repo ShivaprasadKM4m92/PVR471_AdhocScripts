@@ -1,0 +1,12 @@
+HTTP/2.0 200
+Status: 200
+date: Thu, 17 Sep 2020 10:52:24 GMT
+content-type: text/html;charset=UTF-8
+content-length: 1987
+x-frame-options: DENY
+last-modified: Thu, 17 Sep 2020 03:08:02 GMT
+etag: "plugin/dictionary/column-view-e4186929b349cb382ade667c0c6a98f5.html"
+vary: Accept-Encoding
+cache-control: no-cache
+content-encoding: gzip
+

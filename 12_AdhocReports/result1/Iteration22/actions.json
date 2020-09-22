@@ -1,0 +1,22 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP72",
+                "stepName": "Url: reports",
+                "infFile": "t2.inf",
+                "time": 1600340002000
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "Rep6_T01_OpenApplication",
+                "rawStartTime": 1600339999985,
+                "rawEndTime": 1600340002004,
+                "thinkTime": 0.0,
+                "wastedTime": 0.189316987991333
+            }
+        ]
+    }
+]

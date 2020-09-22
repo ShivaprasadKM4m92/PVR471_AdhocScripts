@@ -1,0 +1,1866 @@
+{
+  "FilterHeaders": [
+    {
+      "Header": "x-requested-with",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-http-method-override",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-goog-update-updater",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-goog-update-interactivity",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-goog-update-appid",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-goog-encode-response-if-executable",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-goog-api-key",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-csrf-token",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "user-agent",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "upgrade-insecure-requests",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "upgrade",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-websocket-version",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "sec-websocket-key",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "sec-websocket-extensions",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "sec-fetch-user",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-fetch-site",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-fetch-mode",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-fetch-dest",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "pragma",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "origin",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "if-none-match",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "if-modified-since",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "cache-control",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "accept-language",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "accept-encoding",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "accept",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "a-im",
+      "IncludeInScript": true
+    }
+  ],
+  "FilterResources": [
+    {
+      "IsNonResource": false,
+      "type": "text/plain"
+    },
+    {
+      "IsNonResource": true,
+      "type": "text/html"
+    },
+    {
+      "IsNonResource": false,
+      "type": "text/css"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/png"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/jpeg"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/gif"
+    },
+    {
+      "IsNonResource": false,
+      "type": "font/woff2"
+    },
+    {
+      "IsNonResource": false,
+      "type": "font/woff"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/x-protobuf"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/octet-stream"
+    },
+    {
+      "IsNonResource": true,
+      "type": "application/json"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/javascript"
+    }
+  ],
+  "GeneralInfo": {
+    "BrowserVersion": "",
+    "IsWinInetMode": false,
+    "MaxUsedConnections": 25,
+    "RecordedBrowser": "Chrome",
+    "RecordingDate": "Sep-10-2020",
+    "RecordingDuration": 420563,
+    "RecordingMode": "N/A",
+    "RecordingTimeStamp": 1599742543,
+    "RecordingType": "Browser",
+    "TotalBytesReceived": 2964957,
+    "TotalBytesSent": 127487,
+    "TotalRequests": 170,
+    "UserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
+  },
+  "HostInfo": [
+    {
+      "DomainName": "rxlogix.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "10.100.22.37",
+          "IncludeInScript": true,
+          "Name": "pvr-perf.rxlogix.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 407,
+              "EventId": 833,
+              "HttpStatus": 200,
+              "Size": 3630,
+              "URL": "https://pvr-perf.rxlogix.com/reports/login/auth"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 282,
+              "EventId": 831,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://pvr-perf.rxlogix.com/reports/logoff"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 312,
+              "EventId": 824,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://pvr-perf.rxlogix.com/reports/logout"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 375,
+              "EventId": 814,
+              "HttpStatus": 101,
+              "Size": 0,
+              "URL": "https://pvr-perf.rxlogix.com/reports/stomp/074/h1uu3q9e/websocket"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 312,
+              "EventId": 802,
+              "HttpStatus": 200,
+              "Size": 101,
+              "URL": "https://pvr-perf.rxlogix.com/reports/stomp/info"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 297,
+              "EventId": 799,
+              "HttpStatus": 200,
+              "Size": 68,
+              "URL": "https://pvr-perf.rxlogix.com/reports/configurationRest/executionStatus?draw=1&columns%5B0%5D%5Bdata%5D=reportName&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=periodicReportType&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=version&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=executionStatus&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=owner&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=runDate&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=executionTime&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=false&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=frequency&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=false&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=sharedWith&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=false&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=deliveryMedia&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B10%5D%5Bdata%5D=runDate&columns%5B10%5D%5Bname%5D=&columns%5B10%5D%5Bsearchable%5D=true&columns%5B10%5D%5Borderable%5D=true&columns%5B10%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B10%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=5&order%5B0%5D%5Bdir%5D=desc&start=0&length=50&search%5Bvalue%5D=&search%5Bregex%5D=false&tableFilter=%7B%7D&advancedFilter=false&sharedwith=&searchString=&direction=desc&sort=runDate&status=GENERATING&_=1599742937975"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 297,
+              "EventId": 795,
+              "HttpStatus": 200,
+              "Size": 538,
+              "URL": "https://pvr-perf.rxlogix.com/reports/notificationRest/forUser/64724?_=1599742937974"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "",
+              "DownloadTime": 312,
+              "EventId": 790,
+              "HttpStatus": 200,
+              "Size": 248,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/hbs-templates/filter_panel.hbs"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "",
+              "DownloadTime": 406,
+              "EventId": 786,
+              "HttpStatus": 200,
+              "Size": 858,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/hbs-templates/datepicker.hbs"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 453,
+              "EventId": 784,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/i18n/dataTables_en.json"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 297,
+              "EventId": 782,
+              "HttpStatus": 200,
+              "Size": 265,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/dataTablesActionButtons-dbaa4f19bed1b0ac11118699876720cb.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 296,
+              "EventId": 780,
+              "HttpStatus": 200,
+              "Size": 2704,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/configuration/executionStatus-4cbbed804b3f1124a43c8c7bca08a9fa.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 297,
+              "EventId": 776,
+              "HttpStatus": 200,
+              "Size": 2514,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/utils/pvr-filter-util-305f5a92f479b9a326da11feef107b94.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 281,
+              "EventId": 774,
+              "HttpStatus": 200,
+              "Size": 456,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/utils/pvr-common-util-c530da31e318f4a1f8ebc65324b8ce1f.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 281,
+              "EventId": 772,
+              "HttpStatus": 200,
+              "Size": 280,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/executionStatus-0291e27b037d335048c8c802b3bd133c.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 297,
+              "EventId": 768,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/i18n/en.json"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 281,
+              "EventId": 765,
+              "HttpStatus": 200,
+              "Size": 22843,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/handlebar/handlebars-v4.0.11-5c362fdd07b93a39b600cea43165302f.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 765,
+              "EventId": 746,
+              "HttpStatus": 200,
+              "Size": 40557,
+              "URL": "https://pvr-perf.rxlogix.com/reports/executionStatus/list"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 828,
+              "EventId": 744,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://pvr-perf.rxlogix.com/reports/configuration/run"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 328,
+              "EventId": 741,
+              "HttpStatus": 200,
+              "Size": 41,
+              "URL": "https://pvr-perf.rxlogix.com/reports/keep-alive?_=1599742618468"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 469,
+              "EventId": 722,
+              "HttpStatus": 200,
+              "Size": 41,
+              "URL": "https://pvr-perf.rxlogix.com/reports/keep-alive?_=1599742618467"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 328,
+              "EventId": 705,
+              "HttpStatus": 200,
+              "Size": 41,
+              "URL": "https://pvr-perf.rxlogix.com/reports/keep-alive?_=1599742618466"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 313,
+              "EventId": 695,
+              "HttpStatus": 200,
+              "Size": 37,
+              "URL": "https://pvr-perf.rxlogix.com/reports/template/poiInputsForTemplate?templateId=23823&_=1599742618465"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 360,
+              "EventId": 692,
+              "HttpStatus": 200,
+              "Size": 28,
+              "URL": "https://pvr-perf.rxlogix.com/reports/template/customSQLValuesForTemplate?templateId=23823&_=1599742618464"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 344,
+              "EventId": 687,
+              "HttpStatus": 200,
+              "Size": 201,
+              "URL": "https://pvr-perf.rxlogix.com/reports/reportTemplateRest/getTemplateList?term=Case+Line+Listing+(Study)&page=1&max=30&oldSelectedValue=&_=1599742618463"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 390,
+              "EventId": 684,
+              "HttpStatus": 200,
+              "Size": 1144,
+              "URL": "https://pvr-perf.rxlogix.com/reports/reportTemplateRest/getTemplateList?term=&page=1&max=30&oldSelectedValue=&_=1599742618462"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 344,
+              "EventId": 681,
+              "HttpStatus": 200,
+              "Size": 41,
+              "URL": "https://pvr-perf.rxlogix.com/reports/keep-alive?_=1599742618461"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 312,
+              "EventId": 663,
+              "HttpStatus": 200,
+              "Size": 41,
+              "URL": "https://pvr-perf.rxlogix.com/reports/keep-alive?_=1599742618460"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 375,
+              "EventId": 659,
+              "HttpStatus": 200,
+              "Size": 28,
+              "URL": "https://pvr-perf.rxlogix.com/reports/productDictionary/getPreLevelProductParents"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 359,
+              "EventId": 656,
+              "HttpStatus": 200,
+              "Size": 259,
+              "URL": "https://pvr-perf.rxlogix.com/reports/productDictionary/getSelectedItem?productId=114822&dataSource=pva&dictionaryLevel=1&currentLang=en"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 391,
+              "EventId": 653,
+              "HttpStatus": 200,
+              "Size": 85,
+              "URL": "https://pvr-perf.rxlogix.com/reports/productDictionary/searchViews"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 359,
+              "EventId": 651,
+              "HttpStatus": 200,
+              "Size": 5434,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/column-view-lib-ac11072f2d25b52e3f9f4302182ca97c.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 453,
+              "EventId": 649,
+              "HttpStatus": 200,
+              "Size": 1373,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/tinymce/skins/lightgray/content.min.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 515,
+              "EventId": 647,
+              "HttpStatus": 200,
+              "Size": 8661,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/tinymce/skins/lightgray/skin.min.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 407,
+              "EventId": 645,
+              "HttpStatus": 200,
+              "Size": 420,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/editor-687e49e2901f89d1e65cc77026ec0a3e.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 453,
+              "EventId": 643,
+              "HttpStatus": 101,
+              "Size": 0,
+              "URL": "https://pvr-perf.rxlogix.com/reports/stomp/541/ual7skdw/websocket"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 344,
+              "EventId": 636,
+              "HttpStatus": 200,
+              "Size": 526,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/tinymce/plugins/code/plugin.min.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 360,
+              "EventId": 634,
+              "HttpStatus": 200,
+              "Size": 5734,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/tinymce/plugins/image/plugin.min.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 359,
+              "EventId": 632,
+              "HttpStatus": 200,
+              "Size": 37562,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/tinymce/plugins/table/plugin.min.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 329,
+              "EventId": 630,
+              "HttpStatus": 200,
+              "Size": 3417,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/tinymce/plugins/link/plugin.min.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 297,
+              "EventId": 628,
+              "HttpStatus": 200,
+              "Size": 12173,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/tinymce/plugins/imagetools/plugin.min.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 328,
+              "EventId": 626,
+              "HttpStatus": 200,
+              "Size": 4251,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/polymer-micro.html"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 406,
+              "EventId": 624,
+              "HttpStatus": 200,
+              "Size": 8921,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/polymer-mini.html"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 313,
+              "EventId": 619,
+              "HttpStatus": 200,
+              "Size": 43331,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/tinymce/themes/modern/theme.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 297,
+              "EventId": 617,
+              "HttpStatus": 200,
+              "Size": 483,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/icons/email.png"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 563,
+              "EventId": 609,
+              "HttpStatus": 200,
+              "Size": 99,
+              "URL": "https://pvr-perf.rxlogix.com/reports/stomp/info"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 562,
+              "EventId": 607,
+              "HttpStatus": 200,
+              "Size": 25982,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/polymer.html"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 313,
+              "EventId": 603,
+              "HttpStatus": 200,
+              "Size": 78,
+              "URL": "https://pvr-perf.rxlogix.com/reports/userRest/sharedWithValues?ids=User_64724"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 313,
+              "EventId": 601,
+              "HttpStatus": 200,
+              "Size": 538,
+              "URL": "https://pvr-perf.rxlogix.com/reports/notificationRest/forUser/64724?_=1599742618459"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 282,
+              "EventId": 598,
+              "HttpStatus": 200,
+              "Size": 190,
+              "URL": "https://pvr-perf.rxlogix.com/reports/query/getValuelessOperators"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 594,
+              "EventId": 592,
+              "HttpStatus": 200,
+              "Size": 246,
+              "URL": "https://pvr-perf.rxlogix.com/reports/email/allEmails"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 485,
+              "EventId": 584,
+              "HttpStatus": 200,
+              "Size": 174,
+              "URL": "https://pvr-perf.rxlogix.com/reports/query/getNumOperators"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 469,
+              "EventId": 582,
+              "HttpStatus": 200,
+              "Size": 179,
+              "URL": "https://pvr-perf.rxlogix.com/reports/configurationRest/fetchEvaluateCaseDateSubmissionForDatasource?dataSourceId=6594"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 469,
+              "EventId": 580,
+              "HttpStatus": 200,
+              "Size": 246,
+              "URL": "https://pvr-perf.rxlogix.com/reports/email/allEmailsForCC?emails="
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 437,
+              "EventId": 578,
+              "HttpStatus": 200,
+              "Size": 118,
+              "URL": "https://pvr-perf.rxlogix.com/reports/configurationRest/fetchDateRangeTypesForDatasource?dataSourceId=6594"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 407,
+              "EventId": 576,
+              "HttpStatus": 200,
+              "Size": 323,
+              "URL": "https://pvr-perf.rxlogix.com/reports/query/getDateOperators"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 375,
+              "EventId": 573,
+              "HttpStatus": 200,
+              "Size": 197,
+              "URL": "https://pvr-perf.rxlogix.com/reports/query/getStringOperators"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 390,
+              "EventId": 571,
+              "HttpStatus": 200,
+              "Size": 159,
+              "URL": "https://pvr-perf.rxlogix.com/reports/configurationRest/fetchEvaluateCaseDatesForDatasource?showAllversions=true&dataSourceId=6594"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 281,
+              "EventId": 569,
+              "HttpStatus": 200,
+              "Size": 613,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/select2-2ca61b76e22053571dd8611e5aac4900.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 265,
+              "EventId": 567,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/column-view-e4186929b349cb382ade667c0c6a98f5.html"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "font/woff2",
+              "DownloadTime": 781,
+              "EventId": 564,
+              "HttpStatus": 200,
+              "Size": 18056,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/glyphicons-halflings-regular-448c34a56d699c29117adc64c43affeb.woff2"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 422,
+              "EventId": 562,
+              "HttpStatus": 200,
+              "Size": 1491,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/emailModal-c328f6452c15ee5b9612d5799369da83.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 391,
+              "EventId": 560,
+              "HttpStatus": 200,
+              "Size": 483,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/icons/email-d49eb96cdb0b54cab7135919c7d9e551.png"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 688,
+              "EventId": 550,
+              "HttpStatus": 200,
+              "Size": 118854,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/tinymce/tinymce.min-8913ae2d8b5e63961b59cb681291410b.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 344,
+              "EventId": 548,
+              "HttpStatus": 200,
+              "Size": 1537,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/emailTemplateEditor-340a1a96d629c756ba1192ca0bec7179.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 343,
+              "EventId": 546,
+              "HttpStatus": 200,
+              "Size": 1253,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/emailAttachmentSplit-132f6f5b7d381a44835f915e98384f12.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 344,
+              "EventId": 544,
+              "HttpStatus": 200,
+              "Size": 372,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/studyDrugs-9650caca7b2eaad47de57af7bbefe066.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 312,
+              "EventId": 542,
+              "HttpStatus": 200,
+              "Size": 595,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/dictionaryMultiSearch-6eb3fdf8ab4860190935c80f93a691c7.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 297,
+              "EventId": 540,
+              "HttpStatus": 200,
+              "Size": 344,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/studyCompounds-d1264ac301b89c2be214faf502830ceb.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 312,
+              "EventId": 538,
+              "HttpStatus": 200,
+              "Size": 1849,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/select2-spinner-7b9776076d5fceef4993b55c9383dedd.gif"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 329,
+              "EventId": 536,
+              "HttpStatus": 200,
+              "Size": 558,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/productDictionary-eeaadfef73b9e8aa3d5bbccd020fbe0e.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 328,
+              "EventId": 534,
+              "HttpStatus": 200,
+              "Size": 1215,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/eventGroup-b609e8b0784233cb90bf0848eae39f28.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 312,
+              "EventId": 532,
+              "HttpStatus": 200,
+              "Size": 572,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/dictionary-utils-ef4323deede5f1397600e557dd3fbaf5.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 297,
+              "EventId": 530,
+              "HttpStatus": 200,
+              "Size": 1256,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/productGroup-e9dbab739905a7ce956699bd2b2da330.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 296,
+              "EventId": 528,
+              "HttpStatus": 200,
+              "Size": 9312,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/dictionaries-1cda130ac44885e1ff6e0d3c1b8e6e7d.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 281,
+              "EventId": 526,
+              "HttpStatus": 200,
+              "Size": 1131,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/dictionaries-e3ca4a1b0e40defbb26604f71d113fd0.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 297,
+              "EventId": 522,
+              "HttpStatus": 200,
+              "Size": 1987,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/column-view-e4186929b349cb382ade667c0c6a98f5.html"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 297,
+              "EventId": 520,
+              "HttpStatus": 200,
+              "Size": 130,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/disableAutocomplete-4b64c67585270722b33b13c06f9e5327.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 391,
+              "EventId": 518,
+              "HttpStatus": 200,
+              "Size": 103,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/configuration/emailConfiguration-59c065e4239f87a883e747de81101001.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 344,
+              "EventId": 516,
+              "HttpStatus": 200,
+              "Size": 291,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/expandingTextarea-04fa51fd39d03f48f1fbbac3953c97b8.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 329,
+              "EventId": 514,
+              "HttpStatus": 200,
+              "Size": 1837,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/configuration/copyPasteValues-3ece0aca4da1adbba99a58d4936d46de.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 312,
+              "EventId": 512,
+              "HttpStatus": 200,
+              "Size": 461,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/expandingTextarea-e6f68bca81423576f208f67bb1a470d2.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 297,
+              "EventId": 510,
+              "HttpStatus": 200,
+              "Size": 5913,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/configuration/blankParameters-6b9040b9676c98a7861241e241c4df28.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 312,
+              "EventId": 508,
+              "HttpStatus": 200,
+              "Size": 518,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/copyPasteModal-e538fdadfa9bb40beefda62316b6268f.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 281,
+              "EventId": 506,
+              "HttpStatus": 200,
+              "Size": 512,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/configuration-11b5b002dec2c8f1f643a1db6b80c6db.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 281,
+              "EventId": 504,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/i18n/en.json"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 343,
+              "EventId": 496,
+              "HttpStatus": 200,
+              "Size": 1327,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/configuration/deliveryOption-05a20bf051d1f3fb43f17352ce08685a.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 313,
+              "EventId": 494,
+              "HttpStatus": 200,
+              "Size": 1191,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/configuration/periodicReport-d7d9353e8fb7cc172ac9a0cf79dc2731.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 312,
+              "EventId": 492,
+              "HttpStatus": 200,
+              "Size": 1960,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/configuration/dateRange-73b821853e1bdbb1b6b76bf0136878f1.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 312,
+              "EventId": 490,
+              "HttpStatus": 200,
+              "Size": 1230,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/scheduler-293bc77ad497c01ec53bcb2f97095e6b.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 297,
+              "EventId": 488,
+              "HttpStatus": 200,
+              "Size": 1458,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/configuration/configurationCommon-2f0ee612a463e0aa971eab212c64352d.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 297,
+              "EventId": 486,
+              "HttpStatus": 200,
+              "Size": 4009,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/configuration/templateQueries-40bbfd6232c6e3d39d5c0d24d8198ac6.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 282,
+              "EventId": 484,
+              "HttpStatus": 200,
+              "Size": 433,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/tags-0a636c4c7bc5e4dd91c0e4e6d1889215.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 359,
+              "EventId": 463,
+              "HttpStatus": 200,
+              "Size": 253589,
+              "URL": "https://pvr-perf.rxlogix.com/reports/configuration/create"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 328,
+              "EventId": 451,
+              "HttpStatus": 101,
+              "Size": 0,
+              "URL": "https://pvr-perf.rxlogix.com/reports/stomp/230/zklv4maz/websocket"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 312,
+              "EventId": 447,
+              "HttpStatus": 200,
+              "Size": 246,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/datatables/sort_desc-6f0e1540f8b6fffda24bee3875a2a170.png"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 297,
+              "EventId": 445,
+              "HttpStatus": 200,
+              "Size": 382,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/i18n/dataTables_en.json?_=1599742596789"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 281,
+              "EventId": 443,
+              "HttpStatus": 200,
+              "Size": 253,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/datatables/sort_asc-e2380fa7d4f91f83a037bc04558de9b7.png"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 375,
+              "EventId": 440,
+              "HttpStatus": 200,
+              "Size": 1255,
+              "URL": "https://pvr-perf.rxlogix.com/reports/periodicReportConfigurationRest/latestPeriodicReport?length=4&start=0"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 297,
+              "EventId": 436,
+              "HttpStatus": 200,
+              "Size": 382,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/i18n/dataTables_en.json"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 297,
+              "EventId": 433,
+              "HttpStatus": 200,
+              "Size": 100,
+              "URL": "https://pvr-perf.rxlogix.com/reports/stomp/info"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 563,
+              "EventId": 422,
+              "HttpStatus": 200,
+              "Size": 1257,
+              "URL": "https://pvr-perf.rxlogix.com/reports/reportResultRest/latestAdhocReport?length=4&start=0"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 485,
+              "EventId": 414,
+              "HttpStatus": 200,
+              "Size": 538,
+              "URL": "https://pvr-perf.rxlogix.com/reports/notificationRest/forUser/64724?_=1599742596788"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 469,
+              "EventId": 411,
+              "HttpStatus": 200,
+              "Size": 68,
+              "URL": "https://pvr-perf.rxlogix.com/reports/actionItemRest/index?length=5&start=0&sort=dueDate&direction=asc"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "font/woff",
+              "DownloadTime": 609,
+              "EventId": 409,
+              "HttpStatus": 200,
+              "Size": 49980,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/Material-Design-Iconic-Font-a2a1ba89e7f9d29f7d5aee76e8b9f7ab.woff?v=1.0.1"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "font/woff2",
+              "DownloadTime": 563,
+              "EventId": 407,
+              "HttpStatus": 200,
+              "Size": 77171,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/fontawesome-webfont-af7ae505a9eed503f8b8e6982036873e.woff2?v=4.7.0"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 313,
+              "EventId": 404,
+              "HttpStatus": 200,
+              "Size": 573,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/fullcalendar.print-5e9985f0185898b586ec4820f63bb446.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 297,
+              "EventId": 401,
+              "HttpStatus": 200,
+              "Size": 53624,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/left_bg-b4ea12efc891fcaf7bd4c4b3ba9828cf.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 843,
+              "EventId": 394,
+              "HttpStatus": 200,
+              "Size": 80381,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/bg2-a39cb4fbdd9436c08ad118995fc95c46.png"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 547,
+              "EventId": 392,
+              "HttpStatus": 200,
+              "Size": 1290,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/jquery/customise-jquery-idleTimeout-6286fe026bdf78a6c38a29cfd8d979c8.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 547,
+              "EventId": 390,
+              "HttpStatus": 200,
+              "Size": 2921,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/pvr_logo-4233ea6efeb2ddb09d89415071b55478.png"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 547,
+              "EventId": 388,
+              "HttpStatus": 200,
+              "Size": 1964,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/jquery.app-782d8f87ac279a019b37b18a315654b2.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 515,
+              "EventId": 386,
+              "HttpStatus": 200,
+              "Size": 2634,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/store.modern.min-ee86dbde67356086e53dffdd31c6867d.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 516,
+              "EventId": 384,
+              "HttpStatus": 200,
+              "Size": 1406,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/jquery.core-2c7cdf128b42d849235dea8cadd879b8.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 500,
+              "EventId": 382,
+              "HttpStatus": 200,
+              "Size": 600,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/deleteModal-68b8e74283c8070801d2afbaf40831a1.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 532,
+              "EventId": 372,
+              "HttpStatus": 200,
+              "Size": 1564,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/pushNotification-26ee6ee35dd9b52934080a70ea04a8fd.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 516,
+              "EventId": 370,
+              "HttpStatus": 200,
+              "Size": 85224,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/gridstack/gridstack.jQueryUI.min-5bd5204d23705e69adeb23742f04ff8c.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 485,
+              "EventId": 368,
+              "HttpStatus": 200,
+              "Size": 5390,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/i18n/en.json"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 625,
+              "EventId": 356,
+              "HttpStatus": 200,
+              "Size": 7062,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/highcharts/highcharts-3d-b0c0c823b44f85cb61361491f4353576.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 406,
+              "EventId": 354,
+              "HttpStatus": 200,
+              "Size": 92945,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/gridstack/gridstack.min-157675a5f94f1a18234a494030c5d8f0.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 546,
+              "EventId": 352,
+              "HttpStatus": 200,
+              "Size": 2601,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/highcharts/plugins/grouped-categories-8ddf90b557e5da14225afefcaa8bf9f6.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 563,
+              "EventId": 350,
+              "HttpStatus": 200,
+              "Size": 695,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/highcharts/modules/no-data-to-display-93457bf691aefc406c1da97a1f8d7e2d.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 562,
+              "EventId": 347,
+              "HttpStatus": 200,
+              "Size": 9802,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/highcharts/highcharts-more-31bca387194b423710d019dfa069474a.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 281,
+              "EventId": 345,
+              "HttpStatus": 200,
+              "Size": 69880,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/highcharts/highcharts-01ce2a5c16b4e040b95b02d8cf3ea23e.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 297,
+              "EventId": 340,
+              "HttpStatus": 200,
+              "Size": 30175,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/fuelux/fuelux-58910ec6bd502e7c4aabf85922131616.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 453,
+              "EventId": 338,
+              "HttpStatus": 200,
+              "Size": 1763,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/workFlow-3b78500b81fd61ce5b59cc202a54e63c.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 1625,
+              "EventId": 336,
+              "HttpStatus": 200,
+              "Size": 1311,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/calendar-256cc2c226bcc02548ad879f630767db.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 937,
+              "EventId": 325,
+              "HttpStatus": 200,
+              "Size": 64870,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/fullcalendar/fullcalendar-lang-all-e4e9be403fd4dc092b72c368c27e5d47.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 375,
+              "EventId": 320,
+              "HttpStatus": 200,
+              "Size": 3173,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/fullcalendar.min-c86583f19d010365c34f3af8b45f413e.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 375,
+              "EventId": 314,
+              "HttpStatus": 200,
+              "Size": 724,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/dashboard-8dee5417b984f9891cddc783e9314ce6.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 422,
+              "EventId": 308,
+              "HttpStatus": 200,
+              "Size": 106,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/workflowModal-5491f0c21ba11e20273f35eef0ac46f9.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 421,
+              "EventId": 306,
+              "HttpStatus": 200,
+              "Size": 12208,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/fuelux-b7cf5c5c681fcdbd63156284516c90e9.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 406,
+              "EventId": 303,
+              "HttpStatus": 200,
+              "Size": 2218,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/gridstack.min-82a5fabd01f65ac4b5e87078091be104.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 609,
+              "EventId": 282,
+              "HttpStatus": 200,
+              "Size": 67740,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/fullcalendar/fullcalendar-ab21481ecaaf856ac398df2626c214f0.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 328,
+              "EventId": 280,
+              "HttpStatus": 200,
+              "Size": 3844,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/actionItem/actionItemModal-e7b4ce53f4cdabf3bc5cd40b9a1656bf.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 344,
+              "EventId": 278,
+              "HttpStatus": 200,
+              "Size": 1558,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/dashboard/dashboard-bc7e562b6cf35fb9ffc8863c530c3b80.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 343,
+              "EventId": 276,
+              "HttpStatus": 200,
+              "Size": 496610,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/rxapplication-a4c64b62daed34952a91343c7b3f69bd.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 328,
+              "EventId": 274,
+              "HttpStatus": 200,
+              "Size": 933,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/app/dashboard/addWidgetModal-55496a0c1d77d08dff1258ed41bf54ed.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 344,
+              "EventId": 272,
+              "HttpStatus": 200,
+              "Size": 404,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/theme_gradient_blue-e5b680b16e6c806c1a9a9ae4ce7afc98.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 328,
+              "EventId": 260,
+              "HttpStatus": 200,
+              "Size": 91048,
+              "URL": "https://pvr-perf.rxlogix.com/reports/dashboard/index"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 469,
+              "EventId": 256,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://pvr-perf.rxlogix.com/reports/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 375,
+              "EventId": 252,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://pvr-perf.rxlogix.com/reports/login/authenticate"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 297,
+              "EventId": 239,
+              "HttpStatus": 200,
+              "Size": 3630,
+              "URL": "https://pvr-perf.rxlogix.com/reports/login/auth"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "font/woff2",
+              "DownloadTime": 406,
+              "EventId": 194,
+              "HttpStatus": 200,
+              "Size": 47049,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/OpenSans-Regular-55835483c304eaa8477fea2c36abba17.woff2?v=1.1.0"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 578,
+              "EventId": 190,
+              "HttpStatus": 200,
+              "Size": 1708,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/pv-btn-bg-fe78a517c666e4e5b987b878badafa68.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 563,
+              "EventId": 188,
+              "HttpStatus": 200,
+              "Size": 546257,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/background-4c8c4fd7df1b6436735eac4cfed91698.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 297,
+              "EventId": 184,
+              "HttpStatus": 200,
+              "Size": 7480,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/pv_reports_logo-d8e410c223fee195fa7ea591df1d8d88.png"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 797,
+              "EventId": 173,
+              "HttpStatus": 200,
+              "Size": 1623,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/jquery/customise-jquery.cookiecuttr-7d5013f65bb830d28e9c0f882402df22.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 797,
+              "EventId": 170,
+              "HttpStatus": 200,
+              "Size": 85054,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/jquery/jquery.cookie-1.4.1.min-62bfa1d0d94f4791957d86b90ba720db.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 406,
+              "EventId": 160,
+              "HttpStatus": 200,
+              "Size": 705,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/cookiecuttr-ae22cd548558353de252387c318c41c3.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 391,
+              "EventId": 157,
+              "HttpStatus": 200,
+              "Size": 98895,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/application-f8ff3189b5e73f6aa63ba16652634041.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 922,
+              "EventId": 148,
+              "HttpStatus": 200,
+              "Size": 81305,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/application-cbdbc8928e07797d5f5545294597382d.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 359,
+              "EventId": 143,
+              "HttpStatus": 200,
+              "Size": 769,
+              "URL": "https://pvr-perf.rxlogix.com/reports/assets/login-bb2325f03b9d722b33f4a61d5aade09f.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 297,
+              "EventId": 76,
+              "HttpStatus": 200,
+              "Size": 3630,
+              "URL": "https://pvr-perf.rxlogix.com/reports/login/auth"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 297,
+              "EventId": 58,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://pvr-perf.rxlogix.com/reports/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 281,
+              "EventId": 54,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://pvr-perf.rxlogix.com/reports"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "mxpnl.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "35.186.235.23",
+          "IncludeInScript": true,
+          "Name": "cdn.mxpnl.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 32,
+              "EventId": 52,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://cdn.mxpnl.com/libs/mixpanel-2.2.min.js"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "mixpanel.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "35.186.241.51",
+          "IncludeInScript": true,
+          "Name": "api.mixpanel.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 453,
+              "EventId": 192,
+              "HttpStatus": 200,
+              "Size": 25,
+              "URL": "https://api.mixpanel.com/track/?verbose=1&ip=1&_=1599742564854"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 125,
+              "EventId": 145,
+              "HttpStatus": 200,
+              "Size": 1247,
+              "URL": "https://api.mixpanel.com/decide/?verbose=1&version=1&lib=web&token=94b5c311692e7c9d03cef9c9a7a32eaf&ip=1&_=1599742559952"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "gstatic.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "172.217.6.67",
+          "IncludeInScript": true,
+          "Name": "ssl.gstatic.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 265,
+              "EventId": 68,
+              "HttpStatus": 200,
+              "Size": 77948,
+              "URL": "https://ssl.gstatic.com/safebrowsing/csd/client_model_v5_ext_variation_0.pb"
+            }
+          ],
+          "SSLCipher": "TLS_AES_256_GCM_SHA384",
+          "SSLVersion": "TLS1.3"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "googleapis.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "216.58.194.195",
+          "IncludeInScript": true,
+          "Name": "update.googleapis.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 312,
+              "EventId": 459,
+              "HttpStatus": 200,
+              "Size": 702,
+              "URL": "https://update.googleapis.com/service/update2/json?cup2key=10:4250933451&cup2hreq=8dfc0b195d4de96574eb74e32d9f8b0b1022dec56369fefb1b6f420d682c55b6"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 328,
+              "EventId": 268,
+              "HttpStatus": 200,
+              "Size": 433,
+              "URL": "https://update.googleapis.com/service/update2/json?cup2key=10:168107004&cup2hreq=6223a83a83a6b2dddf81ab2e1bb680a99c22958fb52ab010c5d733152e9582c7"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "172.217.5.106",
+          "IncludeInScript": true,
+          "Name": "safebrowsing.googleapis.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-protobuf",
+              "DownloadTime": 250,
+              "EventId": 828,
+              "HttpStatus": 200,
+              "Size": 82,
+              "URL": "https://safebrowsing.googleapis.com/v4/fullHashes:find?$req=Ch0KDGdvb2dsZWNocm9tZRINODUuMC40MTgzLjEwMhIbCg0IBRAGGAEiAzAwMTABELGgCRoCGAd6PooyEhsKDQgBEAYYASIDMDAxMAEQpe0HGgIYB8YWdbcSGwoNCAMQBhgBIgMwMDEwARDp9gcaAhgHf77ydhIbCg0IBxAGGAEiAzAwMTABELWMCBoCGAcoPuN_EhkKDQgBEAYYASIDMDAxMAMQFBoCGAcxsclIEhoKDQgBEAgYASIDMDAxMAQQ2RsaAhgHtjjvPRIZCg0ICRAGGAEiAzAwMTAGEAMaAhgHfGc_txIaCg0IDxAGGAEiAzAwMTABEJNAGgIYB3y-gLASGQoNCAoQCBgBIgMwMDEwARAGGgIYB7Zue30SGQoNCAkQBhgBIgMwMDEwARAdGgIYB1OJbn0SGgoNCAgQBhgBIgMwMDEwARDfCRoCGAejbFcMEhoKDQgNEAYYASIDMDAxMAEQhnsaAhgHPQAURhIbCg0IDhAGGAEiAzAwMTABEIifBBoCGAfwiPTbEhoKDQgQEAYYASIDMDAxMAEQvAUaAhgHotbbGxosCAEIAwgFCAYIBwgICAkICggNCA4IDwgQEAEQCBoGCgT2SUeSIAEgAyAEIAY=&$ct=application/x-protobuf&key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-protobuf",
+              "DownloadTime": 250,
+              "EventId": 821,
+              "HttpStatus": 200,
+              "Size": 82,
+              "URL": "https://safebrowsing.googleapis.com/v4/fullHashes:find?$req=Ch0KDGdvb2dsZWNocm9tZRINODUuMC40MTgzLjEwMhIbCg0IBRAGGAEiAzAwMTABELGgCRoCGAd6PooyEhsKDQgBEAYYASIDMDAxMAEQpe0HGgIYB8YWdbcSGwoNCAMQBhgBIgMwMDEwARDp9gcaAhgHf77ydhIbCg0IBxAGGAEiAzAwMTABELWMCBoCGAcoPuN_EhkKDQgBEAYYASIDMDAxMAMQFBoCGAcxsclIEhoKDQgBEAgYASIDMDAxMAQQ2RsaAhgHtjjvPRIZCg0ICRAGGAEiAzAwMTAGEAMaAhgHfGc_txIaCg0IDxAGGAEiAzAwMTABEJNAGgIYB3y-gLASGQoNCAoQCBgBIgMwMDEwARAGGgIYB7Zue30SGQoNCAkQBhgBIgMwMDEwARAdGgIYB1OJbn0SGgoNCAgQBhgBIgMwMDEwARDfCRoCGAejbFcMEhoKDQgNEAYYASIDMDAxMAEQhnsaAhgHPQAURhIbCg0IDhAGGAEiAzAwMTABEIifBBoCGAfwiPTbEhoKDQgQEAYYASIDMDAxMAEQvAUaAhgHotbbGxosCAEIAwgFCAYIBwgICAkICggNCA4IDwgQEAEQCBoGCgT2SUeSIAEgAyAEIAY=&$ct=application/x-protobuf&key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-protobuf",
+              "DownloadTime": 641,
+              "EventId": 718,
+              "HttpStatus": 200,
+              "Size": 887,
+              "URL": "https://safebrowsing.googleapis.com/v4/threatListUpdates:fetch?$req=Ch0KDGdvb2dsZWNocm9tZRINODUuMC40MTgzLjEwMhopCAUQARobCg0IBRAGGAEiAzAwMTABELCgCRoCGAdf16RWIgQgASACKAEaKQgBEAEaGwoNCAEQBhgBIgMwMDEwARCl7QcaAhgHxhZ1tyIEIAEgAigBGikIAxABGhsKDQgDEAYYASIDMDAxMAEQ6fYHGgIYB3--8nYiBCABIAIoARopCAcQARobCg0IBxAGGAEiAzAwMTABELSMCBoCGAfFtY1EIgQgASACKAEaJwgBEAEaGQoNCAEQBhgBIgMwMDEwAxAUGgIYBzGxyUgiBCABIAIoAxooCAEQCBoaCg0IARAIGAEiAzAwMTAEENkbGgIYB7Y47z0iBCABIAIoBBonCAkQARoZCg0ICRAGGAEiAzAwMTAGEAMaAhgHfGc_tyIEIAEgAigGGigIDxABGhoKDQgPEAYYASIDMDAxMAEQkkAaAhgH2IpvNyIEIAEgAigBGicIChAIGhkKDQgKEAgYASIDMDAxMAEQBhoCGAe2bnt9IgQgASACKAEaJwgJEAEaGQoNCAkQBhgBIgMwMDEwARAdGgIYB1OJbn0iBCABIAIoARooCAgQARoaCg0ICBAGGAEiAzAwMTABEN8JGgIYB6NsVwwiBCABIAIoARooCA0QARoaCg0IDRAGGAEiAzAwMTABEIZ7GgIYBz0AFEYiBCABIAIoARopCA4QARobCg0IDhAGGAEiAzAwMTABEIefBBoCGAfLCOJsIgQgASACKAEaKAgQEAEaGgoNCBAQBhgBIgMwMDEwARC8BRoCGAei1tsbIgQgASACKAEiAggD&$ct=application/x-protobuf&key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw"
+            }
+          ],
+          "SSLCipher": "TLS_AES_256_GCM_SHA384",
+          "SSLVersion": "TLS1.3"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "172.217.6.74",
+          "IncludeInScript": true,
+          "Name": "content-autofill.googleapis.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/plain",
+              "DownloadTime": 484,
+              "EventId": 417,
+              "HttpStatus": 200,
+              "Size": 180,
+              "URL": "https://content-autofill.googleapis.com/v1/pages/Chc2LjEuMTcxNS4xNDQyL2VuIChHR0xMKRIUCVPhSdfTl0OFEgkNjw8fixIAGgASrgEJZs8wsZFT140SCQ3eP5O-EgAaABIJDVAOKOsSABoAEgkN0HEjsBIAGgASCQ3xrEvREgAaABIJDXOr8B8SABoAEgkNyZT_LxIAGgASCQ2q27eMEgAaABIJDZxy4rcSABoAEgkNUgLjChIAGgASCQ2RyfPpEgAaABIJDSITCW4SABoAEgkNBJw1hxIAGgASCQ0DFGhXEgAaABIJDSeO13kSABoAEgkNPSy82BIAGgASNQmScaNDN_x9xRIJDYoEHBMSABoAEgkNV-V5SxIAGgASCQ1X5XlLEgAaABIJDT0svNgSABoAEhQJrlhUqHM7mzsSCQ3hgpWoEgAaAA==?alt=proto"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/plain",
+              "DownloadTime": 313,
+              "EventId": 242,
+              "HttpStatus": 200,
+              "Size": 44,
+              "URL": "https://content-autofill.googleapis.com/v1/pages/Chc2LjEuMTcxNS4xNDQyL2VuIChHR0xMKRIfCaqJjitNkEYsEgkN541ADhIAGgASCQ3OQUx6EgAaAA==?alt=proto"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "216.58.194.195",
+          "IncludeInScript": true,
+          "Name": "clientservices.googleapis.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 484,
+              "EventId": 50,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://clientservices.googleapis.com/chrome-variations/seed?osname=win&channel=stable&milestone=85"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "google.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "172.217.6.45",
+          "IncludeInScript": true,
+          "Name": "accounts.google.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 265,
+              "EventId": 44,
+              "HttpStatus": 200,
+              "Size": 45,
+              "URL": "https://accounts.google.com/ListAccounts?gpsia=1&source=ChromiumBrowser&json=standard"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "google-analytics.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "216.58.194.206",
+          "IncludeInScript": true,
+          "Name": "www.google-analytics.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 219,
+              "EventId": 42,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://www.google-analytics.com/analytics.js"
+            }
+          ],
+          "SSLCipher": "TLS_AES_256_GCM_SHA384",
+          "SSLVersion": "TLS1.3"
+        }
+      ],
+      "IncludeInScript": true
+    }
+  ],
+  "WebSocket": {
+    "IncludeInScript": false,
+    "IsScriptIncludeWebSocket": true
+  },
+  "NumberOfCorrelations": 13
+}

@@ -1,0 +1,3 @@
+//# sourceMappingURL=tags.js.map
+function showTagWidget(c){$("#tags").select2({placeholder:$.i18n._("placeholder.tags"),allowClear:!0,width:"100%",formatNoMatches:function(a){var b;b=c?"<a href=createTagUrl id='addNew' class='btn btn-success'> "+$.i18n._("create")+"</a>":editMessage;return"<input readonly='readonly' class='form-control' id='newTerm' value='"+a+"'>"+b}}).parent().find(".select2-drop").on("click","#addNew",function(){var a=$("#newTerm").val(),a=encodeToHTML(a);if(""!=$.trim(a)&&c){$("<option>"+a+"</option>").appendTo("#tags");
+var b=$("#tags").select2("val");b.push(a);$("#tags").select2("val",b)}else $("#newTerm").val("");$("#tags").select2("close")})};

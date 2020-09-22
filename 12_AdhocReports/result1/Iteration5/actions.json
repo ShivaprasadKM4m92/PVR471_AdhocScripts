@@ -1,0 +1,48 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP53",
+                "stepName": "Url: reports",
+                "infFile": "t2.inf",
+                "time": 1600339957183
+            },
+            {
+                "stepId": "STEP54",
+                "stepName": "Submit Data: authenticate",
+                "infFile": "t5.inf",
+                "time": 1600339959880
+            },
+            {
+                "stepId": "STEP55",
+                "stepName": "Url: create",
+                "infFile": "t10.inf",
+                "time": 1600339964317
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "Rep6_T01_OpenApplication",
+                "rawStartTime": 1600339955936,
+                "rawEndTime": 1600339957692,
+                "thinkTime": 0.0,
+                "wastedTime": 0.07383394241333008
+            },
+            {
+                "transactionName": "Rep6_T02_Login",
+                "rawStartTime": 1600339957723,
+                "rawEndTime": 1600339961514,
+                "thinkTime": 0.0,
+                "wastedTime": 0.14104056358337403
+            },
+            {
+                "transactionName": "Rep6_T03_NavigateAdhocReport_NewReport",
+                "rawStartTime": 1600339961609,
+                "rawEndTime": 1600339967835,
+                "thinkTime": 0.0,
+                "wastedTime": 0.1870412826538086
+            }
+        ]
+    }
+]

@@ -1,0 +1,1888 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>
+    
+        PV Reports - Dashboard
+    
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/reports/assets/favicon-2ba00fd40faca3ac3c2e810a7412bceb.ico" type="image/x-icon">
+<link rel="stylesheet" href="/reports/assets/application-cbdbc8928e07797d5f5545294597382d.css"/>
+
+<link rel="stylesheet" href="/reports/assets/theme_gradient_blue-e5b680b16e6c806c1a9a9ae4ce7afc98.css"/>
+
+<script type="text/javascript" src="/reports/assets/app/rxapplication-a4c64b62daed34952a91343c7b3f69bd.js" ></script>
+
+<script>
+    userLocale = "en";
+    moment.locale(userLocale);
+    userTimeZone = "UTC";
+    if (userLocale == JAPANESE_LOCALE) {
+        DEFAULT_DATE_DISPLAY_FORMAT = "YYYY/MM/DD";
+        DEFAULT_DATE_TIME_DISPLAY_FORMAT = "YYYY/MM/DD hh:mm A";
+    }
+</script>
+
+    <script>
+    var APP_PATH='/reports';
+    var APP_ASSETS_PATH='/reports/assets/';
+    $.ajax({
+        url: APP_ASSETS_PATH+'i18n/' + userLocale + '.json',
+        dataType: 'json',
+        async: false,
+        success: function(data) {
+            $.i18n.load(data);
+        }
+    });
+
+        var resizefunc = [];
+
+    </script>
+    
+    <meta name="layout" content="main"/>
+    
+    <script type="text/javascript" src="/reports/assets/app/dashboard/addWidgetModal-55496a0c1d77d08dff1258ed41bf54ed.js" ></script>
+    <script type="text/javascript" src="/reports/assets/app/dashboard/dashboard-bc7e562b6cf35fb9ffc8863c530c3b80.js" ></script>
+    <script type="text/javascript" src="/reports/assets/app/actionItem/actionItemModal-e7b4ce53f4cdabf3bc5cd40b9a1656bf.js" ></script>
+    <script type="text/javascript" src="/reports/assets/fullcalendar/fullcalendar-ab21481ecaaf856ac398df2626c214f0.js" ></script>
+    <script type="text/javascript" src="/reports/assets/fullcalendar/fullcalendar-lang-all-e4e9be403fd4dc092b72c368c27e5d47.js" ></script>
+    <script type="text/javascript" src="/reports/assets/app/calendar-256cc2c226bcc02548ad879f630767db.js" ></script>
+    <script type="text/javascript" src="/reports/assets/app/workFlow-3b78500b81fd61ce5b59cc202a54e63c.js" ></script>
+
+    
+    
+
+    <script type="text/javascript" src="/reports/assets/fuelux/fuelux-58910ec6bd502e7c4aabf85922131616.js" ></script>
+    <script type="text/javascript" src="/reports/assets/highcharts/highcharts-01ce2a5c16b4e040b95b02d8cf3ea23e.js" ></script>
+    <script type="text/javascript" src="/reports/assets/highcharts/highcharts-more-31bca387194b423710d019dfa069474a.js" ></script>
+    <script type="text/javascript" src="/reports/assets/highcharts/highcharts-3d-b0c0c823b44f85cb61361491f4353576.js" ></script>
+    <script type="text/javascript" src="/reports/assets/highcharts/modules/no-data-to-display-93457bf691aefc406c1da97a1f8d7e2d.js" ></script>
+    <script type="text/javascript" src="/reports/assets/highcharts/plugins/grouped-categories-8ddf90b557e5da14225afefcaa8bf9f6.js" ></script>
+    <script type="text/javascript" src="/reports/assets/gridstack/gridstack.min-157675a5f94f1a18234a494030c5d8f0.js" ></script>
+    <script type="text/javascript" src="/reports/assets/gridstack/gridstack.jQueryUI.min-5bd5204d23705e69adeb23742f04ff8c.js" ></script>
+
+    <link rel="stylesheet" href="/reports/assets/fuelux-b7cf5c5c681fcdbd63156284516c90e9.css"/>
+    <link rel="stylesheet" href="/reports/assets/gridstack.min-82a5fabd01f65ac4b5e87078091be104.css"/>
+    <link rel="stylesheet" href="/reports/assets/workflowModal-5491f0c21ba11e20273f35eef0ac46f9.css"/>
+    <link rel="stylesheet" href="/reports/assets/dashboard-8dee5417b984f9891cddc783e9314ce6.css"/>
+    <link rel="stylesheet" href="/reports/assets/fullcalendar.min-c86583f19d010365c34f3af8b45f413e.css"/>
+    <link rel="stylesheet" media="print" href="/reports/assets/fullcalendar.print-5e9985f0185898b586ec4820f63bb446.css"/>
+
+    <script type="text/javascript">
+
+        var indexReportUrl = "\u002freports\u002freportResultRest\u002flatestAdhocReport";
+        var periodicReportUrl = "\u002freports\u002fperiodicReportConfigurationRest\u002flatestPeriodicReport";
+        var controllerName = 'dashboard';
+        var actionItemUrl = "\u002freports\u002factionItemRest\u002findex";
+        var showReportUrl = "\u002freports\u002freport\u002fcriteria";
+        var updateStatusUrl = "\u002freports\u002freport\u002fupdateStatus";
+        var deleteReport = "\u002freports\u002freport\u002fdeleteReport?relatedPage=home";
+        var workflowJustificationUrl="\u002freports\u002fworkflowJustificationRest\u002findex";
+        var getSharedWith = "\u002freports\u002freportResultRest\u002fgetSharedWithUsers";
+        var getEmailTo = "\u002freports\u002freportResultRest\u002fgetEmailToUsers";
+        var targetStatesAndApplicationsUrl= "\u002freports\u002fperiodicReport\u002ftargetStatesAndApplications";
+        var workflowJustificationConfirnUrl="\u002freports\u002fworkflowJustificationRest\u002fsave";
+        var addEmailConfiguration="\u002freports\u002freport\u002faddEmailConfiguration";
+        var markAsSubmittedUrl="\u002freports\u002freportSubmission\u002floadReportSubmissionForm";
+        var hasDmsIntegration = false;
+        var dmsFoldersUrl="\u002freports\u002fperiodicReport\u002fgetDmsFolders";
+        var addDmsConfiguration="\u002freports\u002freport\u002faddDmsConfiguration";
+        var reportingDestinationsUrl="\u002freports\u002fqueryRest\u002fgetReportingDestinations";
+        var reportSubmitUrl="\u002freports\u002freportSubmission\u002fsubmitReport";
+
+        var updateActionItemUrl = "\u002freports\u002factionItem\u002fupdate";
+        var viewActionItemUrl = "\u002freports\u002factionItem\u002fview";
+        var listActionItemUrl = "\u002freports\u002factionItemRest\u002findex";
+        var saveActionItemUrl = "\u002freports\u002factionItem\u002fsave";
+
+        // Calendar specific URLs
+        var eventsUrl = "\u002freports\u002fcalendar\u002fevents";
+        var createReportRequestUrl = "\u002freports\u002freportRequest\u002fcreate";
+        var deleteActionItemUrl = "\u002freports\u002factionItem\u002fdelete";
+        var reportRequestShowURL = "\u002freports\u002freportRequest\u002fshow";
+        var executedReportShowURL = "\u002freports\u002freport\u002fshowFirstSection";
+        var adhocReportShowURL = "\u002freports\u002fconfiguration\u002fview";
+        var periodicReportShowURL = "\u002freports\u002fperiodicReport\u002fview";
+        var icsrReportShowURL = "\u002freports\u002ficsrReport\u002fview";
+
+        var adhocReportsSummaryUrl="\u002freports\u002fdashboard\u002fgetAdhocSummary";
+        var aggregateReportsSummaryUrl="\u002freports\u002fdashboard\u002fgetAggregateSummary";
+        var actionItemSummaryUrl="\u002freports\u002fdashboard\u002fgetActionItemSummary";
+        var advancedReportRequestUrl="\u002freports\u002fdashboard\u002fgetAdvancedReportRequest";
+        var reportRequestSummaryUrl="\u002freports\u002fdashboard\u002fgetReportRequestSummary";
+        var etlUrl="\u002freports\u002fdashboard\u002fetl";
+
+        var LINKS = {
+            toPDF : "\u002freports\u002freport\u002fexportReportFromInbox?outputFormat=PDF",
+            toExcel : "\u002freports\u002freport\u002fexportReportFromInbox?outputFormat=XLSX",
+            toWord : "\u002freports\u002freport\u002fexportReportFromInbox?outputFormat=DOCX",
+            toPowerPoint : "\u002freports\u002freport\u002fexportReportFromInbox?outputFormat=PPTX",
+            toShare : "\u002freports\u002freport\u002fshare",
+            toEmail : "\u002freports\u002freport\u002femail"
+        };
+        var CONFIGURATION = {
+             listUrl: "\u002freports\u002fapi\u002fconfigurations?mixedTypes=true",
+             addWidgetUrl:"\u002freports\u002fdashboard\u002faddReportWidget",
+             removeWidgetUrl: "\u002freports\u002fdashboard\u002fremoveReportWidgetAjax",
+             refreshWidgetUrl: "\u002freports\u002fdashboard\u002frefreshReportWidgetAjax",
+             updateWidgetsUrl: "\u002freports\u002fdashboard\u002fupdateReportWidgetsAjax",
+             getChartDataUrl: "\u002freports\u002fdashboard\u002fgetChartWidgetDataAjax",
+             templateTypes: "DATA_TAB, NON_CASE"
+        };
+
+        var adhocExecutedIndexPage="\u002freports\u002freport\u002findex";
+        var aggregateExecutedIndexPage="\u002freports\u002fperiodicReport\u002freports";
+        var actonItemIndexPage="\u002freports\u002factionItem\u002findex";
+        var reportRequestIndexPage="\u002freports\u002freportRequest\u002findex";
+        var qualityCaseCountUrl="\u002freports\u002fquality\u002fajaxCaseCount";
+        var productCountUrl="\u002freports\u002fquality\u002fajaxProductsCount";
+        var entrySiteCountUrl="\u002freports\u002fquality\u002fajaxEntrySiteCount";
+        var errorCountUrl="\u002freports\u002fquality\u002fajaxTop20ErrorsCount";
+        var latestQualityIssuesUrl="\u002freports\u002fquality\u002fajaxLatestQualityIssuesUrl";
+        var caseReportTypeCountUrl="\u002freports\u002fquality\u002fajaxCaseReportTypeCount";
+        var updateLabelUrl="\u002freports\u002fdashboard\u002fupdateLabel";
+
+
+        if (controllerName ==='quality') {
+            document.title = 'PV Quality - Dashboard';
+        }
+        var isEditable=true
+    
+</script>
+
+    
+
+    
+    
+    
+
+    
+        <meta name="_csrf" content="7a25d8c3-8d80-4797-93cc-9d169a8abfee"/>
+        <meta name="_csrf_header" content="X-CSRF-TOKEN"/>
+        <meta name="_csrf_parameter" content="_csrf"/>
+    
+
+</head>
+
+<body class="fixed-left">
+
+<!-- Begin page -->
+<div id="wrapper" class="enlarged forced">
+
+    
+    
+    <!-- Top Bar Start -->
+    
+
+
+
+
+<script type="text/javascript" src="/reports/assets/app/pushNotification-26ee6ee35dd9b52934080a70ea04a8fd.js" ></script>
+<script type="text/javascript">
+
+    function logoutRxSession() {
+      clearFormInputsChangeFlag($(document));
+      $.fn.idleTimeout().logout();
+    }
+    var notificationURL = "\u002freports\u002fnotificationRest\u002fforUser\u002f64724";
+    var notificationChannel ="\u002fnotifications\u002f3e8843ccf952745b268862351bb3bef8";
+    var notificationWSURL = "\u002freports\u002fstomp";
+    var viewNotificationErrorURL = "\u002freports\u002fexecutionStatus\u002fviewNotificationError";
+    var notificationDeleteURL = "\u002freports\u002fnotificationRest\u002fdeleteNotificationById";
+    var notificationDeleteByUserURL = "\u002freports\u002fnotificationRest\u002fdeleteNotificationsForUserId";
+    var reportRedirectURL = "\u002freports\u002freport\u002fshowFirstSection";
+    
+    var hasAccessOnActionItem = true;
+    
+    
+
+</script>
+
+
+<div class="topbar">
+    <!-- LOGO -->
+    <div class="pull-left">
+        <button class="button-menu-mobile open-left waves-effect">
+            <i class="md md-menu"></i>
+        </button>
+        <span class="clearfix"></span>
+    </div>
+
+    <div class="topbar-left">
+        <div class="pull-left">
+            
+                <a href="/reports/dashboard/index"><img src="/reports/assets/pvr_logo-4233ea6efeb2ddb09d89415071b55478.png" class="pvLogo"/></a>
+            
+        </div>
+    </div>
+    <!-- Navbar -->
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="">
+                <ul class="nav navbar-nav hidden-xs pull-left">
+                    
+                    
+                    
+                    
+                    
+                        <li><a href="http://10.100.22.24:8181/signal" class="waves-effect">PV Signal</a></li>
+                    
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    
+                        <li class="hidden-xs m-t-10">
+                            <h5 class="text-white login-user-fullname">Welcome perfuser1!</h5>
+                                <small class="text-white last-login-date-time-box"><b>Last Login</b> :  17-Sep-2020 10:52 AM (GMT +00:00)</small>
+                        </li>
+                        
+                        <li id="menuNotification" class="dropdown hidden-xs">
+                                <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light"
+                                   data-toggle="dropdown" aria-expanded="true">
+                                    <i class="md md-notifications"></i> <span
+                                        id="notificationBadge"  class="badge badge-xs badge-pink"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-lg">
+                                    <li id="notificationHeader" class="text-center notifi-title"></li>
+                                    <li id="notificationRows" class="list-group nicescroll notification-list">
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" id="clearNotifications" class=" text-right" userId="64724">
+                                            <small><b>Clear all</b></small>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </li>
+                        <li class="hidden-xs">
+                            <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light"
+                               data-toggle="dropdown" aria-expanded="true">
+                                <i class="md md-settings"></i></a>
+                            <ul class="dropdown-menu topNavMenu">
+                                    
+                                <li id="help"><a href="/reports/dashboard/index" target="_blank"><i class="md md-help"></i> Help</a></li>
+
+                                
+                                    <li id="executionStatus"><a href="/reports/executionStatus/list"><i class="md md-alarm"></i> Execution Status</a></li>
+                                
+
+                                
+                                    <li class="divider"></li>
+                                    
+                                    <li id="userManagement"><a href="/reports/user/index">User Management</a></li>
+                                    <li id="userManagement"><a href="/reports/userGroup/index">Group Management</a></li>
+                                    <li id="roleManagement"><a href="/reports/role/index">Role Management</a></li>
+                                    
+                                    
+                                        <li id="fieldManagement"><a href="/reports/reportField/index">Field Management</a></li>
+                                        <li id="jsonDownloaded"><a href="/reports/queryTemplateJSON/index">Download JSONs</a> </li>
+                                    
+                                    
+                                        <li id="customField"><a href="/reports/customField/index">Custom Fields</a></li>
+                                    
+                                    
+                                    <li id="userManagement"><a href="/reports/dashboardDictionary/index">Dashboards</a></li>
+                                    
+                                    
+                                    <li id="userManagement"><a href="/reports/fieldProfile/index">Field Profile</a></li>
+                                    <li id="sourceProfileManagement"><a href="/reports/sourceProfile/index">Source Profile</a></li>
+                                    <li id="workflowState"><a href="/reports/workflowState/index">Workflow State</a></li>
+                                    <li id="workflowRule"><a href="/reports/workflowRule/index">Workflow Rule</a></li>
+                                    <li id="reportRequestType"><a href="/reports/reportRequestType/index">Report Request Settings</a></li>
+                                    <li id="taskTemplate"><a href="/reports/taskTemplate/index">Task Template</a></li>
+                                
+                                    <li id="etlScheduler"><a href="/reports/etlSchedule/index">ETL Scheduler</a></li>
+                                    <li id="auditLog"><a href="/reports/auditLog/index">Audit Log</a></li>
+                                    <li id="controlPanel"><a href="/reports/controlPanel/index">Control Panel</a></li>
+                                    <li id="reportFooter"><a href="/reports/reportFooter/index">Footer Configuration</a></li>
+                                    <li id="reportFooter"><a href="/reports/email/index">Email Configuration</a></li>
+                                    <li id="reportFooter"><a href="/reports/emailTemplate/index">Email Template</a></li>
+                                    
+                                    
+                                    <li class="divider"></li>
+                                
+
+                                <li id="menuPreference"><a href="/reports/preference/index"><i class="md md-settings"></i> Preferences</a></li>
+
+                                
+                                    <li class="divider"></li>
+
+                                    
+                                    <li><a href="/reports/monitoring">Monitoring</a></li>
+                                    <li><a href="/reports/quartz">Jobs Monitoring</a></li>
+                                
+
+                                <li class="divider"></li>
+
+                                <li>
+                                    <a href="javascript:void(0);" onclick="logoutRxSession();" type="button"><i class="md md-exit-to-app"></i> Logout</a>
+                            </ul>
+                        </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Top Bar End -->
+
+    <!-- Left Sidebar Start -->
+    
+    
+
+
+<div class="left side-menu">
+    <div class="sidebar-inner slimscrollleft">
+        <div id="sidebar-menu">
+            <ul>
+                <li class="has_sub"><a href="/reports/dashboard/index" class="waves-effect waves-primary"><i
+                        class="md md-dashboard"></i><span>Dashboard</span><span class="menu-arrow"></span></a>
+                    <ul class="list-unstyled">
+                        
+                        <li><a href="/reports/dashboard/newDashboard"><i class="fa fa-plus"></i>New Dashboard</a></li>
+                    </ul>
+                </li>
+                
+                    <li class="has_sub">
+                        <!-- Adhoc Reports -->
+                        <a href="javascript:void(0);" class="waves-effect waves-primary"><i
+                                class="md md-grid-on"></i> <span>Adhoc Reports</span>
+                            <span class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                            
+                                <!-- Load Configurations -->
+                                <li><a href="/reports/configuration/load">Load Configurations</a></li>
+                            
+                            
+                                <!-- New Report -->
+                                <li><a href="/reports/configuration/create">New Report</a></li>
+                            
+                            
+                                <!-- New Report -->
+                                <li><a href="javascript:void(0);"  class="createAdhocFromTemplate">Create From Template</a></li>
+                            
+                            
+                                <!-- Library -->
+                                <li><a href="/reports/configuration/index">Configuration Library</a></li>
+                            
+                            
+                                <!-- Generated Reports -->
+                                <li><a href="/reports/report/index">Generated Reports</a></li>
+                            
+                            
+                                
+                            
+                            
+                                <!-- Bulk Scheduling -->
+                                <li><a href="/reports/configuration/bulkUpdateConfig">Bulk Update</a></li>
+                            
+                        </ul>
+                    </li>
+                
+                
+                    <li class="has_sub">
+                        <!-- Periodic Reports -->
+                        <a href="javascript:void(0);" class="waves-effect waves-primary"><i
+                                class="md md-call-merge"></i><span>Aggregate Reports</span>
+                            <span class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                            
+                                <!-- New Report -->
+                                <li><a href="/reports/periodicReport/create">New Report</a></li>
+                            
+                            
+                                <!-- New Report -->
+                                <li><a href="javascript:void(0);"  class="createAggregateFromTemplate">Create From Template</a></li>
+                            
+                        <!-- Library -->
+                            <li><a href="/reports/periodicReport/index">Configuration Library</a></li>
+                            <!-- Generated Reports -->
+                            <li><a href="/reports/periodicReport/reports">Generated Reports</a></li>
+                            <!-- View Submission History -->
+                            <li><a href="/reports/reportSubmission/index">View Submission History</a></li>
+                            
+                                <!-- Bulk Scheduling -->
+                                <li><a href="/reports/periodicReport/bulkUpdate">Bulk Update</a></li>
+                            
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="has_sub">
+                        <!-- Case Series -->
+                        <a href="javascript:void(0);" class="waves-effect waves-primary"><i class="md md-view-column"></i>
+                            <span>Case Series</span> <span class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                            
+                                <!-- New Case Series -->
+                                <li><a href="/reports/caseSeries/create">New Case Series</a></li>
+                            
+                        <!-- Generated Case Series -->
+                            <li><a href="/reports/caseSeries/index">Configuration Library</a></li>
+                            <!-- Generated Case Series -->
+                            <li><a href="/reports/executedCaseSeries/index">Generated Case Series</a></li>
+                        </ul>
+                    </li>
+                
+                
+                    <!-- Templates -->
+                    <li class="has_sub">
+                        <a href="javascript:void(0);" class="waves-effect waves-primary"><i
+                                class="md md-now-widgets"></i><span>Templates</span> <span
+                                class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                        <li>
+                            
+                                <!-- Load Templates -->
+                                <li><a href="/reports/template/load">Load Templates</a></li>
+                            
+                        <!-- Template Library -->
+                            <li><a href="/reports/template/index">Template Library</a></li>
+                            
+                                <!-- New Case Line Listing Template -->
+                                <li><a href="/reports/template/create?templateType=CASE_LINE">
+                                    New Case Line Listing Template</a></li>
+                                <!-- New Data Tabulation Template -->
+                                <li><a href="/reports/template/create?templateType=DATA_TAB">
+                                    New Data Tabulation Template</a></li>
+                            
+                            
+                                <!-- New Custom SQL Template -->
+                                <li><a href="/reports/template/create?templateType=CUSTOM_SQL">
+                                    New Custom SQL Template</a></li>
+                                <!-- New Non Case Template -->
+                                <li><a href="/reports/template/create?templateType=NON_CASE">
+                                    New Non Case Template</a></li>
+
+                                
+                            
+                            
+                                <!-- New Template Set -->
+                                <li><a href="/reports/template/create?templateType=TEMPLATE_SET">
+                                    New Template Set</a></li>
+                            
+                        </li>
+                        </ul>
+                    </li>
+                
+                
+                    <!-- Queries -->
+                    <li class="has_sub">
+                        <a href="javascript:void(0);" class="waves-effect waves-primary"><i
+                                class="md md-filter-list"></i><span>Queries</span> <span
+                                class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                        <li>
+                            
+                                <!-- Load Queries -->
+                                <li><a href="/reports/query/load">Load Queries</a></li>
+                            
+                        <!-- Query Library -->
+                            <li><a href="/reports/query/index">Query Library</a></li>
+                            
+                                <!-- New Query -->
+                                <li><a href="/reports/query/create">New Query</a></li>
+                            
+                        </li>
+                        </ul>
+                    </li>
+                
+                
+                    <li class="has_sub">
+                        <!-- Data Analysis -->
+                        <a href="javascript:void(0);" class="waves-effect waves-primary"><i class="md md-trending-up"></i>
+                            <span> Data Analysis </span> <span
+                                class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                            <!-- Analysis File Library -->
+                            <li><a href="/reports/dataAnalysis/index">Analysis File Library</a></li>
+                            <!-- New Analysis File -->
+                            <li><a href="/reports/dataAnalysis/create">New Analysis File</a></li>
+                        </ul>
+                    </li>
+                
+                
+                    <li class="has_sub">
+                        <!-- Tasks -->
+                        <a href="javascript:void(0);" class="waves-effect waves-primary"><i
+                                class="md md-assignment"></i><span> Tasks </span> <span
+                                class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                        <!-- Report Requests -->
+                            
+                                <li><a href="/reports/reportRequest/index">Report Requests</a></li>
+                            
+                        <!-- Action Items -->
+                            
+                                <li><a href="/reports/actionItem/index">Action Items</a></li>
+                            
+                        </ul>
+                    </li>
+                
+                
+                    
+                        
+                        
+                                
+                                
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    
+                
+                
+                    <!-- PR Calendar -->
+                    <li><a href="/reports/calendar/index" class="waves-effect waves-primary"><i
+                            class="md md-event"></i><span>Calendar</span></a></li>
+
+                
+            </ul>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+    
+</div>
+<div class="modal fade" id="createFromTemplateModal"  data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby=""  aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="rxmain-container"><div class="rxmain-container-inner"><div class="rxmain-container-row rxmain-container-header"><div class="dropdown"><label class="rxmain-container-header-label">Create From Template</label><i class="pull-right md md-close md-lg rxmain-dropdown-settings" data-dismiss="modal"></i></div></div><div class="row rxmain-container-content">
+                <table id="rxTableTemplateConfiguration" class="row-border hover" width="100%">
+                    <thead>
+                    <tr>
+                        <th class="reportNameColumn">Report Name</th>
+                        <th class="reportDescriptionColumn">Description</th>
+                        <th>Date Created</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div></div></div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+    <!-- Left Sidebar End -->
+    
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div id="mainContent" class="content" style="">
+            
+
+<input type="hidden" id="dashboardId" value="64779">
+<!-- Page-Title -->
+
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="page-title-box">
+            
+                <div class="pull-right">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <span class="dropdown-toggle " data-toggle="dropdown" id="mainDropdownMenu" style="cursor: pointer">
+                    <i class=" fa fa-plus-square fa-lg"   style="color: #555555"></i>  Add widget</span>
+                    <div class="dropdown-menu rx-widget-menu" aria-labelledby="mainDropdownMenu" style="margin-top: -20px;">
+                        <ul class="rx-widget-menu-content" style="width: auto;">
+                            
+                                
+                                    <li data-toggle="modal" data-target="#addWidgetModal">
+                                        <div><i class="fa fa-bar-chart-o"></i> Chart
+                                        </div>
+                                    </li>
+                                    <li data-url="addWidgetUrl"
+                                        data-params='{"widgetType": "LAST_REPORTS"}'>
+                                        <div><i class="fa fa-table"></i> Latest Reports
+                                        </div>
+                                    </li>
+
+                                
+
+                                
+                                    <li data-url="addWidgetUrl"
+                                        data-params='{"widgetType": "ADHOC_REPORTS_SUMMARY"}'>
+                                        <div><i class="md md-grid-on"></i> Adhoc Reports Summary
+                                        </div>
+                                    </li>
+                                
+
+                                
+                                    <li data-url="addWidgetUrl"
+                                        data-params='{"widgetType": "AGGREGATE_REPORTS_SUMMARY"}'>
+                                        <div><i class="md md-call-merge"></i> Aggregate Reports Summary
+                                        </div>
+                                    </li>
+                                
+
+                                
+                                    <li data-url="addWidgetUrl"
+                                        data-params='{"widgetType": "ACTION_ITEMS"}'>
+                                        <div><i class="fa fa-bell"></i> Action Items
+                                        </div>
+                                    </li>
+                                    <li data-url="addWidgetUrl"
+                                        data-params='{"widgetType": "ACTION_ITEMS_SUMMARY"}'>
+                                        <div><i class="fa fa-info-circle"></i> Action Items Summary
+                                        </div>
+                                    </li>
+                                
+
+                                
+                                    <li data-url="addWidgetUrl"
+                                        data-params='{"widgetType": "REPORT_REQUEST_SUMMARY"}'>
+                                        <div><i class="md md-assignment"></i> Report Request Summary
+                                        </div>
+                                    </li>
+                                    <li data-url="addWidgetUrl"
+                                        data-params='{"widgetType": "ADVANCED_REPORT_REQUEST"}'>
+                                        <div><i class="md md-assignment"></i> Report Requests
+                                        </div>
+                                    </li>
+                                
+
+                                
+                                    <li data-url="addWidgetUrl"
+                                        data-params='{"widgetType": "CALENDAR"}'>
+                                        <div><i class="fa fa-calendar"></i> Calendar
+                                        </div>
+                                    </li>
+                                
+                                <li data-url="addWidgetUrl"
+                                    data-params='{"widgetType": "ETL"}'>
+                                    <div><i class="fa fa-calendar-check-o"></i> ETL Status
+                                    </div>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <h4 class="page-title" contenteditable="true">Main Dashboards</h4>
+                <i class=" fa fa-lg fa-pencil editTitle" ></i>
+                
+            
+            </div>
+
+        </div>
+    </div>
+
+    <div id="rx-widgets" class="row">
+        <div class="grid-stack">
+            
+                
+<div class="grid-stack-item"
+     data-gs-id="64780"
+     data-gs-x="0" data-gs-y="0"
+     data-gs-width="6" data-gs-height="6"
+     data-gs-auto-position="true">
+    
+        
+<div class="container-fluid grid-stack-item-content card-box rx-widget">
+    <div class="row rxmain-container-header rx-widget-header">
+            <a href="/reports/report/index" class="rxmain-container-header-label rx-widget-title">Latest Reports</a>
+            
+<a href="javascript:void(0);" id="remove-widget0" data-url="removeWidgetUrl" data-params='{"widgetId": "64780"}'
+   class="remove-widget rxmain-container-header-label pull-right"
+   data-toggle="tooltip" data-placement="bottom" title="Remove Widget"><i class="md-lg md-close"></i></a>
+<a href="javascript:void(0);" id="refresh-widget0" data-url="refreshWidgetUrl" data-params='{"widgetId": "64780"}'
+   class="refresh-widget rxmain-container-header-label pull-right"
+   data-toggle="tooltip" data-placement="bottom" title="Refresh"><i class="md-lg md-refresh"></i></a>
+    </div>
+
+    <div id="container0" class="row rx-widget-content nicescroll">
+        <table id="rxTableLastReports0" class="row-border hover" width="100%">
+            <thead>
+                <tr>
+                    <th>Report Type</th>
+                    <th class="reportNameColumn">Report Name</th>
+                    <th align="center">Version</th>
+                    <th align="center" class="reportDescriptionColumn">Description</th>
+                    <th align="center">Date Generated</th>
+                    <th align="center">State</th>
+                    <th align="center">AI</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <script>
+        ACTION_ITEM_GROUP_STATE_ENUM = {
+            WAITING:'WAITING',
+            OVERDUE:'OVERDUE',
+            CLOSED:'CLOSED'
+        };
+        var refresh0;
+
+        $(function () {
+            refresh0 = function(){
+                loadData(refreshData);
+            };
+            var refreshData = function (dataSet) {
+                var datatable = $('#rxTableLastReports0').dataTable().api();
+                datatable.clear();
+                datatable.rows.add(dataSet);
+                datatable.draw();
+            };
+
+            var loadData = function (processData) {
+                $.ajax({
+                    "url": indexReportUrl,
+                    "data": {
+                        length: 4,
+                        start: 0
+                    }
+                }).done(function (adhocData) {
+                    var dataSet = adhocData['aaData'];
+                    for (var i = 0; i < dataSet.length; i++) {
+                        dataSet[i].configurationType = "adhoc";
+                    }
+
+                    $.ajax({
+                        "url": periodicReportUrl,
+                        "data": {
+                            length: 4,
+                            start: 0
+                        }
+                    }).done(function (aggregateData) {
+                        for (var i = 0; i < aggregateData['aaData'].length; i++) {
+                            aggregateData['aaData'][i]['configurationType'] = "aggregate";
+                            aggregateData['aaData'][i]['owner'] = aggregateData['aaData'][i]['user'];
+                            aggregateData['aaData'][i]['numOfExecutions'] = aggregateData['aaData'][i]['version'];
+                        }
+                        dataSet = dataSet.concat(aggregateData['aaData']);
+                        dataSet = dataSet.sort(function (a, b) {
+                            return moment.utc(b.dateCreated).diff(moment.utc(a.dateCreated))
+                        });
+                        dataSet = dataSet.slice(0, 4);
+
+                    }).fail(function () {
+                        console.log("User has no permissions to view aggregate reports!");
+                    }).always(function () {
+                        processData(dataSet);
+                    });
+                });
+            };
+            var initTable = function (dataSet) {
+                $('#rxTableLastReports0').DataTable({
+                    "language": {
+                        "url": "../assets/i18n/dataTables_" + userLocale + ".json"
+                    },
+                    "customProcessing": true, //handled using processing.dt event
+                    "serverSide": false,
+                    "searching": false,
+                    "scrollX": true,
+                    "scrollY": "300px",
+                    "paging": false,
+                    "info": false,
+                    "data": dataSet,
+                    "order": [[4, "desc"]],
+                    "columnDefs": [
+
+                        {"width": '50', "targets": 0},
+                        {"width": '100', "targets": 1},
+                        {"width": '50', "targets": 2},
+                        {"width": '100%', "targets": 3},
+                        {"width": '100', "targets": 4},
+                        {"width": '105', "targets": 5},
+                        {"width": '45', "targets": 6}
+                    ],
+                    "columns": [
+                        {
+                            "data": "configurationType",
+                            "bSortable": false,
+                            "render": function (data, type, row) {
+                                return $.i18n._(data);
+                            }
+                        }, {
+                            "data": "reportName",
+                            "render": function (data, type, row) {
+                                var link = showReportUrl + '/' + row.id;
+                                data = encodeToHTML(data);
+                                return '<a href=' + link + '>' + data + '</a>'
+                            }
+                        },
+                        {
+                            "data": "numOfExecutions",
+                            "className": "dataTableColumnCenter"
+                        },
+                        {
+                            "data": "description",
+                            "bSortable": false,
+                            "render": function (data, type, row) {
+                                return (data == null) ? data : encodeToHTML(data);
+                            }
+                        },
+                        {
+                            "data": "dateCreated",
+                            "className": "dataTableColumnCenter forceLineWrapDate",
+                            "render": function (data, type, full) {
+                                var dateCreated = Date.parse(data);
+                                return moment.utc(data).tz(userTimeZone).format(DEFAULT_DATE_TIME_DISPLAY_FORMAT)
+                            }
+                        },
+                        {
+                            "mData": "state",
+                            "bSortable": false,
+                            "className": "dataTableColumnCenter",
+                            "mRender": function (data, type, row) {
+                                return '<button class="btn btn-default btn-xs" style="min-width: 100px" data-executed-type="'+row.configurationType+'" data-executed-config-id= "'+row.id+'" data-initial-state= "'+row.state+'" onclick="prepareAndOpenStateHistoryModal(this)">'+row.state+'</button>\
+                                    <div style="display:none">\
+                                    <a class="markAsSubmitted_'+ row.id+'" data-toggle="modal"  data-id="'+row.id+'"  data-target="#reportSubmissionModal" data-url="' + markAsSubmittedUrl + "?id=" + row.id + '">sub</a>\
+                                    <a class="sendToDms_'+ row.id+'" role="menuitem" id="'+row.id+'" data-toggle="modal" data-id="'+row.id+'" data-target="#sendToDmsModal">dms</a>\
+                                    </div>';
+                            }
+                        },
+                        {
+                            "data": null,
+                            "sClass": "dataTableColumnCenter",
+                            "render": function (data, type, row) {
+                                var creationAction = null;
+                                var clazz = "";
+                                if (row.actionItemStatus) {
+                                    switch (row.actionItemStatus) {
+                                        case ACTION_ITEM_GROUP_STATE_ENUM.OVERDUE:
+                                            clazz = "btn btn-danger btn-xs";
+                                            break;
+                                        case ACTION_ITEM_GROUP_STATE_ENUM.WAITING:
+                                            clazz = "btn btn-warning btn-xs";
+                                            break;
+                                        default:
+                                            clazz = "btn btn-success btn-xs";
+                                            break;
+                                    }
+                                    creationAction = '<button class="'+clazz+' actionItemModalIcon" data-exconfig-type="'+(row.configurationType=='adhoc'?ADHOC_REPORT:PERIODIC_REPORT)+'" data-exconfig-id="'+ row.id+'" style="width:65px;">'+$.i18n._('app.actionItemGroupState.'+row.actionItemStatus) +'</button>';
+                                }else {
+                                    
+                                        creationAction='<a href="#" role="menuitem" class="btn btn-default btn-xs listMenuOptions createActionItem" data-exconfig-type="'+(row.configurationType=='adhoc'?ADHOC_REPORT:PERIODIC_REPORT)+'" data-exconfig-id="'+ row.id+'" >' + $.i18n._("workFlowState.reportActionType.CREATE_ACTION_ITEM") + '</a>';
+                                    
+                                }
+                                return creationAction;
+                            }
+                        }
+                    ]
+                }).on('draw.dt', function () {
+                    setTimeout(function () {
+                        $('#rxTableLastReports0 tbody tr').each(function () {
+                            $(this).find('td:eq(4)').attr('nowrap', 'nowrap');
+                        });
+                    }, 100)
+                }).on('xhr.dt', function (e, settings, json, xhr) {
+                    checkIfSessionTimeOutThenReload(e, json);
+                });
+            };
+
+            loadData(initTable);
+
+            $('#refresh-widget0').hide();
+
+            $("#rxTableLastReports0").on("click", ".createActionItem", function () {
+                actionItem.actionItemModal.set_executed_report_id($(this).data('exconfig-id'));
+                actionItem.actionItemModal.init_action_item_modal(false,$(this).data('exconfig-type'));
+            });
+
+            $("#rxTableLastReports0").on("click ", ".actionItemModalIcon", function() {
+                actionItem.actionItemModal.set_executed_report_id($(this).data('exconfig-id'));
+                actionItem.actionItemModal.view_action_item_list(hasAccessOnActionItem,false,$(this).data('exconfig-type'));
+            });
+
+            var reportSubmissionModal = $("#reportSubmissionModal");
+            reportSubmissionModal.on('shown.bs.modal', function (e) {
+                var rowId = $(e.relatedTarget).data('id');
+                showModalLoader(reportSubmissionModal);
+                reportSubmissionModal.find(".modal-content:first").load($(e.relatedTarget).data('url'), function () {
+                    hideModalLoader(reportSubmissionModal);
+                    buildReportingDestinationsSelectBox(reportSubmissionModal.find("[name=reportingDestinations]"), reportingDestinationsUrl, reportSubmissionModal.find("input[name='primaryReportingDestination']"), false);
+                    var submissionDate = reportSubmissionModal.find('.datepicker input[name="submissionDate"]').val();
+                    $('#submissionDateDiv').datepicker({
+                        allowPastDates: true,
+                        date: submissionDate,
+                        twoDigitYearProtection: true,
+                        culture: userLocale,
+                        momentConfig: {
+                            format: DEFAULT_DATE_DISPLAY_FORMAT
+                        }
+                    });
+                    var dueDate = reportSubmissionModal.find('.datepicker input[name="dueDate"]').val();
+                    $('#dueDateDiv').datepicker({
+                        allowPastDates: true,
+                        date: dueDate,
+                        twoDigitYearProtection: true,
+                        culture: userLocale,
+                        momentConfig: {
+                            format: DEFAULT_DATE_DISPLAY_FORMAT
+                        }
+                    });
+                    reportSubmissionModal.find('button.submit-draft').on('click', function () {
+                        $.ajax({
+                            url: reportSubmitUrl,
+                            method: 'POST',
+                            data: reportSubmissionModal.find('form').serialize(),
+                            success: function (result) {
+                                reportSubmissionModal.modal('hide');
+                                successNotification(result.message);
+                            },
+                            error: function (err) {
+                                var responseText = err.responseText;
+                                var responseTextObj = JSON.parse(responseText);
+                                if (responseTextObj.errors != undefined) {
+                                    $.each(responseTextObj.errors, function (index, e) {
+                                        var field = reportSubmissionModal.find('form').find('[name="' + e + '"]');
+                                        if (field != undefined) {
+                                            field.parent().addClass('has-error');
+                                        }
+                                    });
+                                }
+                                if (reportSubmissionModal.find('form').find('.has-error').size() == 0) {
+                                    var errorPanel = $("#error-panel");
+                                    errorPanel.html("");
+                                    responseTextObj.errorMsg.forEach(function (item) {
+                                        errorPanel.append(item + "<br/>");
+                                    });
+                                    errorPanel.css("display", "block");
+                                }
+                            }
+                        });
+                    });
+                })
+            }).on("hidden.bs.modal", function () {
+                reportSubmissionModal.removeData('bs.modal');
+            });
+        });
+
+        function prepareAndOpenStateHistoryModal(btn) {
+            var statusObject = $(btn);
+            var modal = $("#workflowStatusJustification");
+            var execType = statusObject.attr("data-executed-type");
+            reloadData = function (rowId, resetPagination, tableId, response) {
+                doAction(rowId, tableId, response.action);
+                refresh0();
+            };
+            doAction = function (rowId, tableId, actionClassName) {
+                if (actionClassName) {
+                    var dataTable = $("#" + tableId).find("." + actionClassName + "_" + rowId).click();
+                }
+            };
+            modal.find(".confirm-paste").attr("onclick", "confirmJustification('rxTableLastReports0');");
+            if (execType === "aggregate") {
+                modal.find(".required-indicator").show();
+            } else {
+                modal.find(".required-indicator").hide();
+            }
+            openStateHistoryModal(btn);
+        }
+    </script>
+</div>
+
+<form action="/reports/report/index" method="post" onsubmit="return submitForm()" >
+    <input type="hidden" name="executedConfigId" value="" id="executedConfigId" />
+    
+<div class="modal fade" id="sendToDmsModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Upload To Document Management System</h4>
+            </div>
+            <div class="modal-body">
+
+                
+                    <div class="radio radio-inline">
+                        <input type="radio" id="formatPDF" checked name="dmsConfiguration.format" value="PDF"/>
+                        <label for="formatPDF">
+                            PDF
+                        </label>
+                    </div>
+                
+                    <div class="radio radio-inline">
+                        <input type="radio" id="formatXLSX"  name="dmsConfiguration.format" value="XLSX"/>
+                        <label for="formatXLSX">
+                            Excel
+                        </label>
+                    </div>
+                
+                    <div class="radio radio-inline">
+                        <input type="radio" id="formatDOCX"  name="dmsConfiguration.format" value="DOCX"/>
+                        <label for="formatDOCX">
+                            Word
+                        </label>
+                    </div>
+                
+                    <div class="radio radio-inline">
+                        <input type="radio" id="formatPPTX"  name="dmsConfiguration.format" value="PPTX"/>
+                        <label for="formatPPTX">
+                            PowerPoint
+                        </label>
+                    </div>
+                
+                    <div class="radio radio-inline">
+                        <input type="radio" id="formatZIP"  name="dmsConfiguration.format" value="ZIP"/>
+                        <label for="formatZIP">
+                            ZIP
+                        </label>
+                    </div>
+                
+                    <div class="radio radio-inline">
+                        <input type="radio" id="formatR3XML"  name="dmsConfiguration.format" value="R3XML"/>
+                        <label for="formatR3XML">
+                            R3XML
+                        </label>
+                    </div>
+                
+                <span class="glyphicon glyphicon-edit showDmsConfigurationDlg" style="cursor: pointer;font-size: 25px;margin-left: 190px;"></span>
+                <div id="formatError" hidden="hidden">
+                    <div class="row">
+                        <div class="col-xs-12" style="color: #ff0000">
+                            Select at least one attachment format!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="submit" name="_action_sendToDms" value="Send" class="btn btn-primary" />
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="dmsConfigContainer">
+</div>
+</form>
+<div class="modal fade" id="reportSubmissionModal" tabindex="-1" role="dialog"
+     aria-labelledby="reportSubmissionModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+
+        <!-- Modal Dialog starts -->
+        <div class="modal-dialog vertical-align-center">
+
+            <div class="modal-content">
+                
+            </div><!-- modal-content ends-->
+
+        </div><!-- modal-dialog ends-->
+    </div>
+</div><!-- modal -->
+
+    
+
+</div>
+            
+                
+<div class="grid-stack-item"
+     data-gs-id="64781"
+     data-gs-x="7" data-gs-y="0"
+     data-gs-width="6" data-gs-height="6"
+     data-gs-auto-position="true">
+    
+        
+
+<div class="container-fluid grid-stack-item-content card-box rx-widget">
+    <div class="row rxmain-container-header rx-widget-header">
+            <a href="/reports/actionItem/index" class="rxmain-container-header-label rx-widget-title">Action Items</a>
+            
+<a href="javascript:void(0);" id="remove-widget1" data-url="removeWidgetUrl" data-params='{"widgetId": "64781"}'
+   class="remove-widget rxmain-container-header-label pull-right"
+   data-toggle="tooltip" data-placement="bottom" title="Remove Widget"><i class="md-lg md-close"></i></a>
+<a href="javascript:void(0);" id="refresh-widget1" data-url="refreshWidgetUrl" data-params='{"widgetId": "64781"}'
+   class="refresh-widget rxmain-container-header-label pull-right"
+   data-toggle="tooltip" data-placement="bottom" title="Refresh"><i class="md-lg md-refresh"></i></a>
+    </div>
+
+    <div id="container1" class="row rx-widget-content nicescroll">
+        <table id="rxTableActionItems1" class="row-border hover" width="100%">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Due Date</th>
+                    <th>Priority</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <script>
+        $(function () {
+            var refreshData = function (dataSet) {
+                var datatable = $('#rxTableActionItems1').dataTable().api();
+                datatable.clear();
+                datatable.rows.add(dataSet);
+                datatable.draw();
+            };
+            var loadData = function (processData) {
+                $.ajax({
+                    "url": actionItemUrl,
+                    "data": {
+                        length: 5,
+                        start: 0,
+                        sort: "dueDate",
+                        direction: "asc"
+                    }
+                }).done(function (dataSet) {
+                    processData(dataSet.aaData);
+                });
+            };
+            var initTable = function (dataSet) {
+                var table = $('#rxTableActionItems1').DataTable({
+                    fnInitComplete: function () {
+                    },
+                    "language": {
+                        "url": "../assets/i18n/dataTables_" + userLocale + ".json"
+                    },
+                    "customProcessing": true, //handled using processing.dt event
+                    "serverSide": false,
+                    "searching": false,
+                    "paging": false,
+                    "info": false,
+                    "data": dataSet,
+                    "order": [[1, "asc"], [2, "asc"]],
+                    "columns": [
+                        {
+                            "data": "description",
+                            "render": function (data, type, row) {
+                                var truncatedDes = "";
+                                if (row.description.length > 30) {
+                                    truncatedDes = row.description.substring(0, 29) + "...";
+                                } else {
+                                    truncatedDes = row.description
+                                }
+
+                                return '<a href="javascript:viewActionItem(' + row.actionItemId + ');">'
+                                    + encodeToHTML(truncatedDes) + '</a>';
+                            }
+                        },
+                        {
+                            "data": "dueDate",
+                            "className": "dataTableColumnCenter",
+                            "render": function (data, type, full) {
+                                return data ? moment(data).format(DEFAULT_DATE_DISPLAY_FORMAT) : "";
+                            }
+                        },
+                        {
+                            "data": "priority",
+                            "render": function (data, type, full) {
+                                if (type === "sort" || type === 'type') {
+                                    return (data == "HIGH" ? 1 : (data == "MEDIUM" ? 2 : 3));
+                                }
+                                var prioritySpan = document.createElement("span");
+                                prioritySpan.classList.add("label");
+                                switch (data) {
+                                    case "HIGH":
+                                        prioritySpan.classList.add("label-danger");
+                                        break;
+                                    case "MEDIUM":
+                                        prioritySpan.classList.add("label-warning");
+                                        break;
+                                    default:
+                                        prioritySpan.classList.add("label-default");
+                                        break;
+
+                                }
+                                prioritySpan.appendChild(document.createTextNode(data));
+                                return prioritySpan.outerHTML;
+                            }
+                        }
+                    ]
+                });
+            };
+
+            $('#refresh-widget1').hide();
+
+            loadData(initTable);
+        });
+        var viewActionItem = function (actionItemId) {
+
+            $('.edit-action-item').on('click', function () {
+                actionItem.actionItemModal.edit_action_item(hasAccessOnActionItem,actionItemId, true, null, null);
+            });
+
+            $('.update-action-item').on('click', function () {
+                actionItem.actionItemModal.update_action_item(false, $('#actionItemModal'), null);
+            });
+
+            actionItem.actionItemModal.view_action_item(actionItemId);
+        };
+    </script>
+</div>
+    
+
+</div>
+            
+        </div>
+    </div>
+    <!-- end row -->
+    <form>
+    <!-- Modal -->
+
+
+
+
+<div class="modal fade" id="deleteModal"  data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+     aria-hidden="true" style="z-index: 9999;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="deleteModalLabel"></h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="alert alert-danger alert-dismissible forceLineWrap" role="alert" id="deleteDlgErrorDiv" style="display: none">
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <i class="fa fa-check"></i> Justification can''t be blank.
+                </div>
+                <div id="nameToDelete"></div>
+                <p></p>
+                <div class="description" style="font-weight:bold;"></div>
+                <div class="extramessage"></div>
+
+                <div id="deleteForAllAllowed" class="checkbox checkbox-primary"  style="display: none">
+                    <input type="hidden" name="_deleteForAll" /><input type="checkbox" name="deleteForAll" id="deleteForAll"  />
+                    <label for="deleteForAll" class="add-margin-bottom" style="margin-bottom: 5px;">
+                        Delete For All Users
+                    </label>
+                </div>
+
+                <label style="margin-top: 25px">Justification:</label>
+                <textarea placeholder="Enter the justification" class="form-control" name="deleteJustification" id="deleteJustification" ></textarea>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button id="deleteButton" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-trash icon-white"></span>
+                    Delete Record
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script type="text/javascript" src="/reports/assets/app/deleteModal-68b8e74283c8070801d2afbaf40831a1.js" ></script>
+
+
+    </form>
+    <div class="modal fade" id="addWidgetModal"  data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="addWidgetModalLabel"
+         aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="rxmain-container"><div class="rxmain-container-inner"><div class="rxmain-container-row rxmain-container-header"><div class="dropdown"><label class="rxmain-container-header-label">Report Library</label><i class="pull-right md md-close md-lg rxmain-dropdown-settings" data-dismiss="modal"></i></div></div><div class="row rxmain-container-content">
+                <table id="rxTableConfiguration" class="row-border hover" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Report Type</th>
+                        <th class="reportNameColumn">Report Name</th>
+                        <th class="reportDescriptionColumn">Description</th>
+                        <th>Run Times</th>
+                        <th>Owner</th>
+                        <th>Date Created</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div></div></div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+    <div class="modal fade" id="actionItemModal"  data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+            <div class="modal-header dropdown">
+                <button type="button" class="close close-action-item-model" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Action Item</h4>
+
+            </div>
+            <div class="modal-body action-item-modal-body">
+                <div class="alert alert-danger" style="display:none">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <span id="fieldErrorMessage">Please fill all required fields</span>
+                    <span id="otherErrorMessage" style="display:none">Please fill all required fields</span>
+                </div>
+               <form action="/reports/dashboard/index/actionItemForm" method="post" name="actionItemForm" id="actionItemForm" >
+                   
+<div>
+
+        <div class="row">
+
+            <div class="col-xs-4">
+                <label>Action Category<span class="required-indicator">*</span></label>
+                <select id="actionCategory" name="actionCategory" class="form-control select2-box needsActionItemRole" >
+<option value="">-Select Category-</option>
+<option value="REPORT_REQUEST" >Report Request</option>
+<option value="REQUEST_MISSING_INFORMATION" >Request Missing Information</option>
+<option value="PROCESS_CASE" >Process Case</option>
+<option value="PERIODIC_REPORT" >Aggregate Report</option>
+<option value="CONFIGURE_REPORT" >Configure Report</option>
+<option value="ADHOC_REPORT" >Adhoc Report</option>
+<option value="REVIEW_REPORT" >Review Report</option>
+</select>
+            </div>
+
+            <div class="col-xs-4">
+                <label>Priority<span class="required-indicator">*</span></label>
+                <select id="priority" name="priority" class="form-control select2-box needsActionItemRole" >
+<option value=""></option>
+<option value="HIGH" >High</option>
+<option value="MEDIUM" >Medium</option>
+<option value="LOW" >Low</option>
+</select>
+            </div>
+
+            <div class="col-xs-4">
+                <script>
+                    sharedWithListUrl = "/reports/userRest/sharedWithList";
+                    sharedWithValuesUrl = "/reports/userRest/sharedWithValues";
+                    $(document).ready(function () {
+                        bindShareWith($('.sharedWithControl'), sharedWithListUrl, sharedWithValuesUrl,"100%",true)
+                    });
+                </script>
+                Assigned To<span class="required-indicator">*</span></label>
+                <input class="sharedWithControl form-control needsActionItemRole" id="assignedTo" name="assignedTo" value="">
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-4">
+                <label>Due Date<span class="required-indicator">*</span></label>
+                <div class="fuelux">
+                    <div>
+                        <div class="datepicker toolbarInline pastDateNotAllowed" id="dueDateDiv">
+                            <div class="input-group">
+                                <input type="text" id="dueDate" placeholder="Select Due Date" class="form-control fuelux needsActionItemRole" name="dueDate" value="" />
+                                <div class="input-group-btn">
+    <button type="button" class="btn btn-primary btn-css dropdown-toggle" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span class="sr-only">Toggle Calendar</span>
+    </button>
+
+    <div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper" role="menu">
+        <div class="datepicker-calendar">
+            <div class="datepicker-calendar-header">
+                <button type="button" class="prev"><span class="glyphicon glyphicon-chevron-left"></span><span
+                        class="sr-only">Previous Month</span></button>
+                <button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"></span><span
+                        class="sr-only">Next Month</span></button>
+                <button type="button" class="title">
+                    <span class="month">
+                        <span data-month="0">January</span>
+                        <span data-month="1">February</span>
+                        <span data-month="2">March</span>
+                        <span data-month="3">April</span>
+                        <span data-month="4">May</span>
+                        <span data-month="5">June</span>
+                        <span data-month="6">July</span>
+                        <span data-month="7">August</span>
+                        <span data-month="8">September</span>
+                        <span data-month="9">October</span>
+                        <span data-month="10">November</span>
+                        <span data-month="11">December</span>
+                    </span> <span class="year"></span>
+                </button>
+            </div>
+            <table class="datepicker-calendar-days">
+                <thead>
+                <tr>
+                    <th>Su</th>
+                    <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="datepicker-calendar-footer">
+                <button type="button" class="datepicker-today">Today</button>
+            </div>
+        </div>
+
+        <div class="datepicker-wheels" aria-hidden="true">
+            <div class="datepicker-wheels-month">
+                <h2 class="header">Month</h2>
+                <ul>
+                    <li data-month="0"><button type="button">Jan</button></li>
+                    <li data-month="1"><button type="button">Feb</button></li>
+                    <li data-month="2"><button type="button">Mar</button></li>
+                    <li data-month="3"><button type="button">Apr</button></li>
+                    <li data-month="4"><button type="button">May</button></li>
+                    <li data-month="5"><button type="button">Jun</button></li>
+                    <li data-month="6"><button type="button">Jul</button></li>
+                    <li data-month="7"><button type="button">Aug</button></li>
+                    <li data-month="8"><button type="button">Sep</button></li>
+                    <li data-month="9"><button type="button">Oct</button></li>
+                    <li data-month="10"><button type="button">Nov</button></li>
+                    <li data-month="11"><button type="button">Dec</button></li>
+                </ul>
+            </div>
+
+            <div class="datepicker-wheels-year">
+                <h2 class="header">Year</h2>
+                <ul></ul>
+            </div>
+
+            <div class="datepicker-wheels-footer clearfix">
+                <button type="button" class="btn datepicker-wheels-back"><span
+                        class="glyphicon glyphicon-arrow-left"></span><span class="sr-only">Return to Calendar</span>
+                </button>
+                <button type="button" class="btn datepicker-wheels-select">Select <span
+                        class="sr-only">Month and Year</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-4">
+                <label>Completion Date</label>
+                <div class="fuelux">
+                    <div>
+                        <div class="datepicker toolbarInline pastDateNotAllowed" id="completionDateDiv">
+                            <div class="input-group">
+                                <input type="text" id="completionDate" placeholder="Select Completion Date" class="form-control fuelux needsActionItemRole" name="completionDate" value="" />
+                                <div class="input-group-btn">
+    <button type="button" class="btn btn-primary btn-css dropdown-toggle" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span class="sr-only">Toggle Calendar</span>
+    </button>
+
+    <div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper" role="menu">
+        <div class="datepicker-calendar">
+            <div class="datepicker-calendar-header">
+                <button type="button" class="prev"><span class="glyphicon glyphicon-chevron-left"></span><span
+                        class="sr-only">Previous Month</span></button>
+                <button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"></span><span
+                        class="sr-only">Next Month</span></button>
+                <button type="button" class="title">
+                    <span class="month">
+                        <span data-month="0">January</span>
+                        <span data-month="1">February</span>
+                        <span data-month="2">March</span>
+                        <span data-month="3">April</span>
+                        <span data-month="4">May</span>
+                        <span data-month="5">June</span>
+                        <span data-month="6">July</span>
+                        <span data-month="7">August</span>
+                        <span data-month="8">September</span>
+                        <span data-month="9">October</span>
+                        <span data-month="10">November</span>
+                        <span data-month="11">December</span>
+                    </span> <span class="year"></span>
+                </button>
+            </div>
+            <table class="datepicker-calendar-days">
+                <thead>
+                <tr>
+                    <th>Su</th>
+                    <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="datepicker-calendar-footer">
+                <button type="button" class="datepicker-today">Today</button>
+            </div>
+        </div>
+
+        <div class="datepicker-wheels" aria-hidden="true">
+            <div class="datepicker-wheels-month">
+                <h2 class="header">Month</h2>
+                <ul>
+                    <li data-month="0"><button type="button">Jan</button></li>
+                    <li data-month="1"><button type="button">Feb</button></li>
+                    <li data-month="2"><button type="button">Mar</button></li>
+                    <li data-month="3"><button type="button">Apr</button></li>
+                    <li data-month="4"><button type="button">May</button></li>
+                    <li data-month="5"><button type="button">Jun</button></li>
+                    <li data-month="6"><button type="button">Jul</button></li>
+                    <li data-month="7"><button type="button">Aug</button></li>
+                    <li data-month="8"><button type="button">Sep</button></li>
+                    <li data-month="9"><button type="button">Oct</button></li>
+                    <li data-month="10"><button type="button">Nov</button></li>
+                    <li data-month="11"><button type="button">Dec</button></li>
+                </ul>
+            </div>
+
+            <div class="datepicker-wheels-year">
+                <h2 class="header">Year</h2>
+                <ul></ul>
+            </div>
+
+            <div class="datepicker-wheels-footer clearfix">
+                <button type="button" class="btn datepicker-wheels-back"><span
+                        class="glyphicon glyphicon-arrow-left"></span><span class="sr-only">Return to Calendar</span>
+                </button>
+                <button type="button" class="btn datepicker-wheels-select">Select <span
+                        class="sr-only">Month and Year</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-4">
+                <label>Status</label>
+                <select name="status" class="form-control select2-box needsActionItemRole" id="status" >
+<option value="OPEN" >Open</option>
+<option value="IN_PROGRESS" >In Progress</option>
+<option value="NEED_CLARIFICATION" >Need Clarification</option>
+<option value="CLOSED" >Closed</option>
+</select>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-12">
+                <label>Description<span class="required-indicator">*</span></label>
+                <textarea id="description" name="description" rows="15" cols="40" maxlength="4000" class="form-control needsActionItemRole" ></textarea>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-4" id="linkDiv" style="display: none">
+                <label>Associated Report</label><br>
+                <a href="" data-base-url="/reports/report/showFirstSection" id="link"></a>
+            </div>
+            <div class="col-xs-4" id="linkConfigDiv" style="display: none">
+                <label>Associated Configuration</label><br>
+                <a href="" data-base-url="/reports/periodicReport/view" id="configLink"></a>
+            </div>
+            <div class="col-xs-4" id="linkRequestDiv" style="display: none">
+                <label>Associated Report Request</label><br>
+                <a href="" data-base-url="/reports/reportRequest/show" id="requestLink"></a>
+            </div>
+            <div class="col-xs-4">
+               <label>Created By</label>
+               <div id="createdBy">perfuser1</div>
+               <input type="hidden" name="actionItemId" id="actionItemId" value="" />
+               <input type="hidden" name="appType" id="appType" value="" />
+           </div>
+           <div class="col-xs-4">
+               <label>Date Created</label>
+               <div id="dateCreated" class="dateCreated"></div>
+               <input type="hidden" name="dateCreated" value="" id="dateCreated" />
+           </div>
+        </div>
+        <div class="row" id="associatedCaseNoDiv">
+             <div class="col-xs-12">
+                 <label>Associated Case Number</label>
+                 <div id="associatedCaseNumber" class="associatedCaseNumber"></div>
+             </div>
+        </div>
+    <input type="hidden" name="aiVersion" value="" id="aiVersion" />
+</div>
+
+                   <!-- Executed report id field is kept -->
+                   <input type="hidden" name="executedReportId" id="executedReportId" value="" />
+                   <input type="hidden" name="assignedToName" id="assignedToName" value="" />
+                   <input type="hidden" name="caseNumber" id="caseNumber" value="" />
+                   <input type="hidden" name="errorType" id="errorType" value="" />
+                   <input type="hidden" name="dataType" id="dataTypeAi" value="" />
+                   <input type="hidden" name="caseVersion" id="caseVersion" value="" />
+                   <input type="hidden" name="capaId" id="capaId" value="" />
+               </form>
+
+            </div>
+
+            <div class="modal-footer">
+                <div  class="buttons creationButtons">
+                    
+                    <input id="creationScreenButton" type="button" class="btn btn-primary save-action-item creationButton" value="Save" >
+                    <input id="editScreenButton" type="button" class="hide btn btn-primary update-action-item consultationButtons" value="Update">
+                    <input id="viewScreenButton" type="button" class="hide btn btn-primary edit-action-item consultationButtons" value="Edit">
+                    <input id="deleteActionItem" type="button" class="hide btn btn-primary action-item-delete consultationButtons" value="Delete">
+                    
+                        <button type="button" class="btn btn-default close-action-item-model">Close </button>
+
+                </div>
+
+                <!-- Index kept for the purpose if integrating this with other apps and knowing the current index.  -->
+                <input type="hidden" name="index" id="index" value="" />
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="actionItemListModal"  data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+            <div class="modal-header dropdown">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Action Item</h4>
+
+            </div>
+            <div class="modal-body action-item-modal-body">
+                <table id="actionItemList" class="row-border hover" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Assigned To</th>
+                            <th>Description</th>
+                            <th>Due Date</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <div  class="buttons creationButtons">
+                    <button type="button" class="btn btn-default close-action-item-model">Close </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal fade" id="warningModal"  data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="warningModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="warningModalLabel">Information</h4>
+            </div>
+
+            <div class="modal-body">
+
+
+                <div class="description" style="font-weight:bold;">Current chart is scheduled and will be automatically updated on</div>
+
+                <div class="extramessage"></div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    
+
+<!-- Modal for Workflow State Justification -->
+<div class="modal fade workflowStatusJustification"  data-backdrop="static" style="margin-left: 5px" id="workflowStatusJustification"
+     tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" onclick='closeJustificationModal();' aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Workflow Status</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="workflow-state-update">
+                    <div class="alert alert-warning alert-dismissible forceLineWrap" role="alert" style="display: none;">
+                        <button type="button" class="close" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <i class="fa fa-warning"></i> Warning!
+                        <div id="workflow-warning"></div>
+                    </div>
+                    <div class="alert alert-danger hide">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <span id="workflowErrorMessage"></span>
+                    </div>
+                    <form action="/reports/dashboard/index/justificationForm" method="post" autocomplete="off" name="justificationForm" id="justificationForm" >
+                        <div>
+                            <label>
+                                State
+                                <span class="required-indicator">*</span>
+                            </label>
+                        </div>
+
+                        <div id="showSel">
+                            <select style="height: 30px;width:250px;" class="form-control" name="toState.id" id="workflowSelect"></select>
+                        </div>
+
+                        <div class="workflow"></div>
+                        <div id="needApprovalDiv" style="display: none">
+                            <label>
+                                Need Approval (reenter login and password)
+                            </label>
+                            <div>
+                                <label>
+                                    Username
+                                    <span class="required-indicator">*</span>
+                                </label>
+                            </div>
+                            <div>
+                                
+                                <input autocomplete="autocomplete_off_xfr4!k1"  name="1600340006650" disabled="true" id="login-input" value="perfuser1" class="form-control login-input">
+                            </div>
+                            <div>
+                                <label>
+                                    Password
+                                    <span class="required-indicator">*</span>
+                                </label>
+                            </div>
+                            <div id="password-input-div">
+                                <input autocomplete="autocomplete_off_xfr4!k"  name="1600340006650" id="password-input" class="form-control password-input" type="text">
+                            </div>
+                        </div>
+                        <div class="description-wrapper">
+                            <label>Justification
+                            </label>
+                            <textarea rows="5" cols="3" id="description" name="description" maxlength="255" style="height: 110px;" class="form-control " ></textarea>
+                            Max: 255 Characters
+                        </div>
+
+                        <div class="workflow"></div>
+
+                        <input type="hidden" name="dataLength" id="dataLength">
+                        <input type="hidden" name="fromState.id" id="fromState">
+                        <input type="hidden" name="executedReportConfiguration.id" id="reportId">
+                        <input type="hidden" name="reportRequest.id" id="wfReportRequestId">
+                        <input type="hidden" name="workflowRule.id" id="workflowRuleId">
+                    </form>
+                </div>
+
+                <div class="workflow-state-history">
+                    <div>
+                        <label>History</label>
+                        <table id="workflowJustificationTable" border="1" bordercolor="#D3D3D3">
+                            <th class="workflowTableHead1">From State</th>
+                            <th class="workflowTableHead1">To State</th>
+                            <th class="workflowTableHead1">Date</th>
+                            <th class="workflowhead2">Routed By</th>
+                            <th class="workflowhead2">Justification</th>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" id="saveButton" class="btn btn-success confirm-paste" onclick="confirmJustification('rxTableReports');">
+                    Confirm
+                </button>
+                <button type="button" class="btn btn-default cancel" onclick='closeJustificationModal();'>
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<form style="display: none" id="exportFormId" method="post" action="/reports/dashboard/exportWidget">
+    <input name="data" id="data">
+</form>
+
+        </div>
+        <!-- End content -->
+    
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Right content here -->
+    <!-- ============================================================== -->
+</div>
+<script type="text/javascript" src="/reports/assets/app/jquery.core-2c7cdf128b42d849235dea8cadd879b8.js" ></script>
+<script type="text/javascript" src="/reports/assets/app/jquery.app-782d8f87ac279a019b37b18a315654b2.js" ></script>
+
+    
+
+
+
+<script type="text/javascript" src="/reports/assets/store.modern.min-ee86dbde67356086e53dffdd31c6867d.js" ></script>
+<script type="text/javascript" src="/reports/assets/jquery/customise-jquery-idleTimeout-6286fe026bdf78a6c38a29cfd8d979c8.js" ></script> 
+<script type="text/javascript">
+
+    $(document).ready(function() {
+      $(document).idleTimeout({
+      redirectUrl:  "https:\u002f\u002fpvr-perf.rxlogix.com\u002freports/logout",
+      idleTimeLimit: 1800,
+      sessionKeepAliveUrl: "https:\u002f\u002fpvr-perf.rxlogix.com\u002freports/keep-alive",
+      sessionKeepAliveTimer: 60,
+      enableDialog: true,
+      dialogDisplayLimit: 300,
+      activityEvents: 'click keypress',
+      customCallback: function() {
+          var forms = $('form');
+            if(forms.find('.changed-input').length){
+                alert($.i18n._('navigateAwayChangesLostMessage'));
+                clearFormInputsChangeFlag(forms);
+            }
+      }
+      });
+    });
+
+</script>
+
+
+</body>
+</html>
