@@ -1,0 +1,11 @@
+[t42]
+FileName1=t42_pushNotification-26ee6ee35dd9b52934080a70ea04a8fd.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/app/pushNotification-26ee6ee35dd9b52934080a70ea04a8fd.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_42.xml
+RequestHeaderFile=t42_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t42_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

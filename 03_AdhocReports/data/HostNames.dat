@@ -1,0 +1,10 @@
+[hosts]
+www.google-analytics.com=
+accounts.google.com=
+clientservices.googleapis.com=
+cdn.mxpnl.com=
+pvr-perf.rxlogix.com=
+ssl.gstatic.com=
+api.mixpanel.com=
+update.googleapis.com=
+safebrowsing.googleapis.com=

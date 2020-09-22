@@ -1,0 +1,11 @@
+[t28]
+FileName1=t28_dashboard-8dee5417b984f9891cddc783e9314ce6.css
+URL1=https://pvr-perf.rxlogix.com/reports/assets/dashboard-8dee5417b984f9891cddc783e9314ce6.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_28.xml
+RequestHeaderFile=t28_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t28_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

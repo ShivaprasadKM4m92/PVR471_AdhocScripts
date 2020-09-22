@@ -1,0 +1,13 @@
+GET /reports/assets/tinymce/plugins/imagetools/plugin.min.js HTTP/1.1
+Host: pvr-perf.rxlogix.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: script
+Referer: https://pvr-perf.rxlogix.com/reports/configuration/create
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: SESSION=2b32993a-3dcc-4a00-9510-fa0ae92e1450; cc_cookie_decline=null; cc_cookie_accept=cc_cookie_accept
+

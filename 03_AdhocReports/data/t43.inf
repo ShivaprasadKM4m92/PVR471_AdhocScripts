@@ -1,0 +1,11 @@
+[t43]
+FileName1=t43_deleteModal-68b8e74283c8070801d2afbaf40831a1.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/app/deleteModal-68b8e74283c8070801d2afbaf40831a1.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_43.xml
+RequestHeaderFile=t43_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t43_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
