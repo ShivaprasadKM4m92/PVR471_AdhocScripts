@@ -1,0 +1,11 @@
+[t90]
+FileName1=t90_emailModal-c328f6452c15ee5b9612d5799369da83.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/app/emailModal-c328f6452c15ee5b9612d5799369da83.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_90.xml
+RequestHeaderFile=t90_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t90_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
