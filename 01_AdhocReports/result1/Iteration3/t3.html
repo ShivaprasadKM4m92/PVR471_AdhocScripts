@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>PV Reports - Login</title>
+        <link rel="shortcut icon" href="/reports/assets/favicon-2ba00fd40faca3ac3c2e810a7412bceb.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/reports/assets/login-bb2325f03b9d722b33f4a61d5aade09f.css"/>
+        <link rel="stylesheet" href="/reports/assets/application-cbdbc8928e07797d5f5545294597382d.css"/>
+        <link rel="stylesheet" href="/reports/assets/cookiecuttr-ae22cd548558353de252387c318c41c3.css"/>
+        <script type="text/javascript" src="/reports/assets/application-f8ff3189b5e73f6aa63ba16652634041.js" ></script>
+        <script type="text/javascript" src="/reports/assets/jquery/jquery.cookie-1.4.1.min-62bfa1d0d94f4791957d86b90ba720db.js" ></script>
+        <script type="text/javascript" src="/reports/assets/jquery/customise-jquery.cookiecuttr-7d5013f65bb830d28e9c0f882402df22.js" ></script>
+        <meta name="instance-name" content=""/>
+        <meta http-equiv="refresh" content="1800"/>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div id="loginStyle">
+                <form action='/reports/login/authenticate' method='POST' id="loginForm" role="form" autocomplete="off">
+                    <div id="loginTable">
+                        <div id="loginHeader">
+                            <div>
+                                <img src="/reports/assets/pv_reports_logo-d8e410c223fee195fa7ea591df1d8d88.png" id="loginLogo"/>
+                            </div>
+                            <div>
+                                <label id="loginLabel">Log in</label>
+                            </div>
+                        </div>
+
+                        <div id="loginUserContainer">
+                            <input type="text" name="username" id="username" class="loginFieldUser" placeholder="Username" required autofocus>
+                        </div>
+
+                        <div id="loginPassContainer">
+                            <input type="password" name="password" id="password" class="loginFieldPass" placeholder="Password" required>
+                        </div>
+
+                        <div id="loginFooter">
+                            <button id="loginSubmit" type="submit">Log in</button>
+                        </div>
+
+                        
+                            <input type="hidden" name="_csrf" value="10cac03b-da47-4452-924b-0fb9d6a523a1"/>
+                        
+                    </div>
+
+                    <div class="text-center">
+                        <div class="login_message text-white"><em style="font-style: inherit">This is a restricted application. Anyone gaining unauthorized access will be prosecuted.</em></div>
+                    </div>
+
+                    <div class="margin20Top">
+                        
+
+
+
+
+
+
+
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small pt-4">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">Copyright © 2020 · RxLogix Corporation · All Rights Reserved 
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <script type='text/javascript'>
+        <!--
+        (function () {
+            $.cookieCuttr({
+                cookieAnalyticsMessage: 'This application uses cookies to ensure you get the best experience on our application.',
+                cookieAcceptButtonText: 'GOT IT!',
+                secure: true
+            });
+            document.forms['loginForm'].elements['username'].focus();
+        })();
+        // -->
+    </script>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+[t44]
+FileName1=t44_jquery.core-2c7cdf128b42d849235dea8cadd879b8.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/app/jquery.core-2c7cdf128b42d849235dea8cadd879b8.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_44.xml
+RequestHeaderFile=t44_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t44_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

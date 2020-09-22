@@ -1,0 +1,13 @@
+GET /reports/assets/login-bb2325f03b9d722b33f4a61d5aade09f.css HTTP/1.1
+Host: pvr-perf.rxlogix.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: https://pvr-perf.rxlogix.com/reports/login/auth
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: SESSION=14a1a7b4-6a37-4ede-a098-b267c9fa83a3
+

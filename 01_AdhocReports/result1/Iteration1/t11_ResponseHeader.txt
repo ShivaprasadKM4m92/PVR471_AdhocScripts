@@ -1,0 +1,12 @@
+HTTP/2.0 200
+Status: 200
+date: Mon, 14 Sep 2020 13:45:49 GMT
+content-type: application/json;charset=UTF-8
+content-length: 382
+x-frame-options: DENY
+last-modified: Fri, 11 Sep 2020 08:47:30 GMT
+etag: "i18n/dataTables_en-b9b01b8c59208a270975d85c7973f4ec.json"
+vary: Accept-Encoding
+cache-control: no-cache
+content-encoding: gzip
+

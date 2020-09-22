@@ -1,0 +1,12 @@
+HTTP/2.0 200
+Status: 200
+date: Mon, 14 Sep 2020 13:46:21 GMT
+content-type: application/json;charset=UTF-8
+content-length: 5390
+x-frame-options: DENY
+last-modified: Fri, 11 Sep 2020 08:47:30 GMT
+etag: "i18n/en-73992e9f1e3ec42357f9b54766fd9d49.json"
+vary: Accept-Encoding
+cache-control: no-cache
+content-encoding: gzip
+
