@@ -1,0 +1,11 @@
+[t12]
+FileName1=t12_jquery.cookie-1.4.1.min-62bfa1d0d94f4791957d86b90ba720db.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/jquery/jquery.cookie-1.4.1.min-62bfa1d0d94f4791957d86b90ba720db.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_12.xml
+RequestHeaderFile=t12_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t12_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

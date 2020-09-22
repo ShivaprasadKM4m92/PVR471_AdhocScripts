@@ -1,0 +1,14 @@
+GET /reports/assets/OpenSans-Regular-55835483c304eaa8477fea2c36abba17.woff2?v=1.1.0 HTTP/1.1
+Host: pvr-perf.rxlogix.com
+Connection: keep-alive
+Origin: https://pvr-perf.rxlogix.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: font
+Referer: https://pvr-perf.rxlogix.com/reports/assets/application-cbdbc8928e07797d5f5545294597382d.css
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: SESSION=14a1a7b4-6a37-4ede-a098-b267c9fa83a3
+

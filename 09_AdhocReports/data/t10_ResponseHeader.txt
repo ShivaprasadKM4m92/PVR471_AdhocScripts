@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+Date: Thu, 10 Sep 2020 12:56:01 GMT
+Content-Type: application/javascript;charset=UTF-8
+Content-Length: 98895
+Connection: keep-alive
+X-Frame-Options: DENY
+Last-Modified: Tue, 08 Sep 2020 09:01:42 GMT
+ETag: "application-f8ff3189b5e73f6aa63ba16652634041.js"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+

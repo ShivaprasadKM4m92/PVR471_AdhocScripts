@@ -1,0 +1,37 @@
+Start auto log messages stack - Iteration 3.
+Action.c(641): web_url("{User_Id}") started  	[MsgId: MMSG-26355]
+Action.c(641): Registering web_url("{User_Id}") was successful  	[MsgId: MMSG-26390]
+Action.c(653): web_url("latestAdhocReport") started  	[MsgId: MMSG-26355]
+Action.c(653): Registering web_url("latestAdhocReport") was successful  	[MsgId: MMSG-26390]
+Action.c(664): web_url("info") started  	[MsgId: MMSG-26355]
+Action.c(664): Registering web_url("info") was successful  	[MsgId: MMSG-26390]
+Action.c(679): web_url("dataTables_en.json") started  	[MsgId: MMSG-26355]
+Action.c(679): Registering web_url("dataTables_en.json") was successful  	[MsgId: MMSG-26390]
+Action.c(739): web_concurrent_end started  	[MsgId: MMSG-26355]
+Action.c(653): Error -26610: HTTP Status-Code=502 (Bad Gateway) for "https://pvr-perf.rxlogix.com/reports/reportResultRest/latestAdhocReport?length=4&start=0"   [issued at Action.c(739)]  	[MsgId: MERR-26610]
+End auto log messages stack.
+
+Start auto log messages stack - Iteration 4.
+Action.c(59): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
+Action.c(69): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(69): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(73): web_url("reports") started  	[MsgId: MMSG-26355]
+Action.c(73): Redirecting "https://pvr-perf.rxlogix.com/reports" (redirection depth is 0)  	[MsgId: MMSG-26694]
+Action.c(73): To location "https://pvr-perf.rxlogix.com/reports/"  	[MsgId: MMSG-26693]
+Action.c(73): Redirecting "https://pvr-perf.rxlogix.com/reports/" (redirection depth is 1)  	[MsgId: MMSG-26694]
+Action.c(73): To location "https://pvr-perf.rxlogix.com/reports/dashboard/index"  	[MsgId: MMSG-26693]
+Action.c(73): Error -35061: No match found for the requested parameter "CsrfTokenId1". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 256 bytes. The total length of the response is 91048 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-35061]
+End auto log messages stack.
+
+Start auto log messages stack - Iteration 5.
+Action.c(59): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
+Action.c(69): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(69): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(73): web_url("reports") started  	[MsgId: MMSG-26355]
+Action.c(73): Redirecting "https://pvr-perf.rxlogix.com/reports" (redirection depth is 0)  	[MsgId: MMSG-26694]
+Action.c(73): To location "https://pvr-perf.rxlogix.com/reports/"  	[MsgId: MMSG-26693]
+Action.c(73): Redirecting "https://pvr-perf.rxlogix.com/reports/" (redirection depth is 1)  	[MsgId: MMSG-26694]
+Action.c(73): To location "https://pvr-perf.rxlogix.com/reports/dashboard/index"  	[MsgId: MMSG-26693]
+Action.c(73): Error -35061: No match found for the requested parameter "CsrfTokenId1". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 256 bytes. The total length of the response is 91048 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-35061]
+End auto log messages stack.
+

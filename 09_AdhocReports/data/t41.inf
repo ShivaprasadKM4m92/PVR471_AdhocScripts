@@ -1,0 +1,11 @@
+[t41]
+FileName1=t41_gridstack.jQueryUI.min-5bd5204d23705e69adeb23742f04ff8c.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/gridstack/gridstack.jQueryUI.min-5bd5204d23705e69adeb23742f04ff8c.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_41.xml
+RequestHeaderFile=t41_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t41_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
