@@ -1,0 +1,11 @@
+[t65]
+FileName1=t65_dateRange-73b821853e1bdbb1b6b76bf0136878f1.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/app/configuration/dateRange-73b821853e1bdbb1b6b76bf0136878f1.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_65.xml
+RequestHeaderFile=t65_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t65_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

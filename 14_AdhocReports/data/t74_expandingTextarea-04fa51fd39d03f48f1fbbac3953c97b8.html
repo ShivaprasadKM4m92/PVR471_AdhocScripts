@@ -1,0 +1,2 @@
+//# sourceMappingURL=expandingTextarea.js.map
+$(document).ready(function(){for(var b=document.querySelectorAll(".expandingArea"),a=b.length;a--;)makeExpandingArea(b[a])});function makeExpandingArea(b){var a=b.querySelector("textarea"),c=b.querySelector("span");a.addEventListener?(a.addEventListener("input",function(){c.textContent=a.value},!1),c.textContent=a.value):a.attachEvent&&(a.attachEvent("onpropertychange",function(){c.innerText=a.value}),c.innerText=a.value);b.className+=" active"};

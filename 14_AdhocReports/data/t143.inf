@@ -1,0 +1,11 @@
+[t143]
+FileName1=t143_64724.json
+URL1=https://pvr-perf.rxlogix.com/reports/notificationRest/forUser/64724?_=1599742937974
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_143.xml
+RequestHeaderFile=t143_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t143_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,11 @@
+[t133]
+FileName1=t133_handlebars-v4.0.11-5c362fdd07b93a39b600cea43165302f.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/handlebar/handlebars-v4.0.11-5c362fdd07b93a39b600cea43165302f.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_133.xml
+RequestHeaderFile=t133_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t133_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
