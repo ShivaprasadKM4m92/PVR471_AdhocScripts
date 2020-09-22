@@ -1,0 +1,9 @@
+[t13]
+SnapshotXmlFile=snapshot_13.xml
+FileName1=t13.jpg
+URL1=https://pvr-perf.rxlogix.com/reports/assets/pv-btn-bg-fe78a517c666e4e5b987b878badafa68.jpg
+Total=1
+RequestHeaderFile=t13_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t13_ResponseHeader.txt
+ContentType=image/jpeg

@@ -1,0 +1,11 @@
+[t38]
+FileName1=t38_gridstack.min-157675a5f94f1a18234a494030c5d8f0.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/gridstack/gridstack.min-157675a5f94f1a18234a494030c5d8f0.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_38.xml
+RequestHeaderFile=t38_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t38_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
