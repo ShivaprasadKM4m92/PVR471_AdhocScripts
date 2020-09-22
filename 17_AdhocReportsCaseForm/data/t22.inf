@@ -1,0 +1,11 @@
+[t22]
+FileName1=t22_dashboard-bc7e562b6cf35fb9ffc8863c530c3b80.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/app/dashboard/dashboard-bc7e562b6cf35fb9ffc8863c530c3b80.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_22.xml
+RequestHeaderFile=t22_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t22_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

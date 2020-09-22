@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Project\PVR\PVR47\Scripts\AdhocScripts\17_AdhocReportsCaseForm
+-IC:\Program Files (x86)\Micro Focus\LoadRunner\include
+-ec:\project\pvr\pvr47\scripts\adhocscripts\17_adhocreportscaseform\\logfile.log
+c:\project\pvr\pvr47\scripts\adhocscripts\17_adhocreportscaseform\\combined_17_AdhocReportsCaseForm.c
+c:\project\pvr\pvr47\scripts\adhocscripts\17_adhocreportscaseform\\pre_cci.c

@@ -1,0 +1,2 @@
+//# sourceMappingURL=dataTablesActionButtons.js.map
+window.actionButton=function(b){b=$(b).find("tbody");$(b).on("mouseover","tr",function(){var a=$(this).find("td:last-child").find("div");a.parent().addClass("no-padding");a.removeClass("dataTableHideCellContent")}).on("mouseleave","tr",function(){var a=$(this).find("td:last-child").find("div");a.hasClass("open")||a.addClass("dataTableHideCellContent")}).on("click","td",function(){$(this).find("div").hasClass("open");$(this);$(this).focusout(function(){$(this).find("div")})})};
