@@ -1,0 +1,11 @@
+[t71]
+FileName1=t71_blankParameters-6b9040b9676c98a7861241e241c4df28.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/app/configuration/blankParameters-6b9040b9676c98a7861241e241c4df28.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_71.xml
+RequestHeaderFile=t71_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t71_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

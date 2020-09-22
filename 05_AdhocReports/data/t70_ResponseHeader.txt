@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+Date: Thu, 10 Sep 2020 12:56:57 GMT
+Content-Type: text/css;charset=UTF-8
+Content-Length: 518
+Connection: keep-alive
+X-Frame-Options: DENY
+Last-Modified: Tue, 08 Sep 2020 08:59:50 GMT
+ETag: "copyPasteModal-e538fdadfa9bb40beefda62316b6268f.css"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+

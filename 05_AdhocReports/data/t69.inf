@@ -1,0 +1,11 @@
+[t69]
+FileName1=t69_configuration-11b5b002dec2c8f1f643a1db6b80c6db.css
+URL1=https://pvr-perf.rxlogix.com/reports/assets/configuration-11b5b002dec2c8f1f643a1db6b80c6db.css
+Total=1
+ContentType=text/css
+SnapshotXmlFile=snapshot_69.xml
+RequestHeaderFile=t69_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t69_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
