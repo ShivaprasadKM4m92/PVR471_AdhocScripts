@@ -1,0 +1,11 @@
+[t104]
+FileName1=t104.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/polymer.html
+Total=1
+RequestHeaderFile=t104_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t104_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_104.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

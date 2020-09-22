@@ -1,0 +1,11 @@
+[t73]
+FileName1=t73_copyPasteValues-3ece0aca4da1adbba99a58d4936d46de.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/app/configuration/copyPasteValues-3ece0aca4da1adbba99a58d4936d46de.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_73.xml
+RequestHeaderFile=t73_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t73_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
