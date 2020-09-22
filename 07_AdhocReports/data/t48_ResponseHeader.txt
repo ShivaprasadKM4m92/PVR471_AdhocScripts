@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+Date: Thu, 10 Sep 2020 12:56:38 GMT
+Content-Type: text/css;charset=UTF-8
+Content-Length: 573
+Connection: keep-alive
+X-Frame-Options: DENY
+Last-Modified: Tue, 08 Sep 2020 08:59:54 GMT
+ETag: "fullcalendar.print-5e9985f0185898b586ec4820f63bb446.css"
+Vary: Accept-Encoding
+Cache-Control: public, max-age=31536000
+Content-Encoding: gzip
+

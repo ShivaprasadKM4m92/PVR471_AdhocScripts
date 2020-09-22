@@ -1,0 +1,11 @@
+[t79]
+FileName1=t79_dictionaries-1cda130ac44885e1ff6e0d3c1b8e6e7d.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/plugin/dictionary/dictionaries-1cda130ac44885e1ff6e0d3c1b8e6e7d.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_79.xml
+RequestHeaderFile=t79_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t79_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

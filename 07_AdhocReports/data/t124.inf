@@ -1,0 +1,11 @@
+[t124]
+FileName1=t124_getTemplateList.json
+URL1=https://pvr-perf.rxlogix.com/reports/reportTemplateRest/getTemplateList?term=&page=1&max=30&oldSelectedValue=&_=1599742618462
+Total=1
+ContentType=application/json
+SnapshotXmlFile=snapshot_124.xml
+RequestHeaderFile=t124_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t124_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
