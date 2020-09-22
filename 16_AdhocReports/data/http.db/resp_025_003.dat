@@ -1,0 +1,842 @@
+7e9d
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>
+    
+        PV Reports - Execution Status
+    
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/reports/assets/favicon-2ba00fd40faca3ac3c2e810a7412bceb.ico" type="image/x-icon">
+<link rel="stylesheet" href="/reports/assets/application-cbdbc8928e07797d5f5545294597382d.css"/>
+
+<link rel="stylesheet" href="/reports/assets/theme_gradient_blue-e5b680b16e6c806c1a9a9ae4ce7afc98.css"/>
+
+<script type="text/javascript" src="/reports/assets/app/rxapplication-a4c64b62daed34952a91343c7b3f69bd.js" ></script>
+
+<script>
+    userLocale = "en";
+    moment.locale(userLocale);
+    userTimeZone = "UTC";
+    if (userLocale == JAPANESE_LOCALE) {
+        DEFAULT_DATE_DISPLAY_FORMAT = "YYYY/MM/DD";
+        DEFAULT_DATE_TIME_DISPLAY_FORMAT = "YYYY/MM/DD hh:mm A";
+    }
+</script>
+
+    <script>
+    var APP_PATH='/reports';
+    var APP_ASSETS_PATH='/reports/assets/';
+    $.ajax({
+        url: APP_ASSETS_PATH+'i18n/' + userLocale + '.json',
+        dataType: 'json',
+        async: false,
+        success: function(data) {
+            $.i18n.load(data);
+        }
+    });
+
+        var resizefunc = [];
+
+    </script>
+    
+    <meta name="layout" content="main"/>
+    
+    <script type="text/javascript" src="/reports/assets/handlebar/handlebars-v4.0.11-5c362fdd07b93a39b600cea43165302f.js" ></script>
+    <script type="text/javascript" src="/reports/assets/app/utils/pvr-common-util-c530da31e318f4a1f8ebc65324b8ce1f.js" ></script>
+    <script type="text/javascript" src="/reports/assets/app/utils/pvr-filter-util-305f5a92f479b9a326da11feef107b94.js" ></script>
+    <script type="text/javascript" src="/reports/assets/app/configuration/executionStatus-4cbbed804b3f1124a43c8c7bca08a9fa.js" ></script>
+    <script type="text/javascript" src="/reports/assets/app/dataTablesActionButtons-dbaa4f19bed1b0ac11118699876720cb.js" ></script>
+    <script type="text/javascript" src="/reports/assets/fuelux/fuelux-58910ec6bd502e7c4aabf85922131616.js" ></script>
+    <link rel="stylesheet" href="/reports/assets/fuelux-b7cf5c5c681fcdbd63156284516c90e9.css"/>
+    <link rel="stylesheet" href="/reports/assets/executionStatus-0291e27b037d335048c8c802b3bd133c.css"/>
+    <script type="text/javascript">
+
+        var toFavorite = "\u002freports\u002fconfiguration\u002ffavorite";
+        var ownerListUrl = "\u002freports\u002fuserRest\u002fownerFilterList?clazz=com.rxlogix.config.ExecutionStatus";
+        var ownerValuesUrl = "\u002freports\u002fuserRest\u002fuserValue";
+        var frequencyType= JSON.parse("\u005b\u007b\u0022key\u0022:\u0022HOURLY\u0022\u002c\u0022value\u0022:\u0022Hourly\u0022\u007d\u002c\u007b\u0022key\u0022:\u0022DAILY\u0022\u002c\u0022value\u0022:\u0022Daily\u0022\u007d\u002c\u007b\u0022key\u0022:\u0022WEEKLY\u0022\u002c\u0022value\u0022:\u0022Weekly\u0022\u007d\u002c\u007b\u0022key\u0022:\u0022MONTHLY\u0022\u002c\u0022value\u0022:\u0022Monthly\u0022\u007d\u002c\u007b\u0022key\u0022:\u0022YEARLY\u0022\u002c\u0022value\u0022:\u0022Yearly\u0022\u007d\u002c\u007b\u0022key\u0022:\u0022RUN_ONCE\u0022\u002c\u0022value\u0022:\u0022Run Once\u0022\u007d\u005d")
+        var executionStatusUrl = "\u002freports\u002fconfigurationRest\u002fexecutionStatus";
+        var executionErrorUrl = "\u002freports\u002fexecutionStatus\u002freportExecutionError";
+        var ShowConfigUrl = "\u002freports\u002fexecutionStatus\u002fviewConfig";
+        var viewResultURL = "\u002freports\u002fexecutionStatus\u002fviewResult";
+        var ShowScheduledConfigUrl = "\u002freports\u002fexecutionStatus\u002fviewScheduledConfig";
+        var killExecutionUrl = "\u002freports\u002fconfigurationRest\u002fkillExecution";
+        var unscheduleUrl = "\u002freports\u002fconfigurationRest\u002funschedule";
+        var removeFromBacklogUrl = "\u002freports\u002fconfigurationRest\u002fremoveFromBacklog";
+    
+</script>
+
+
+    
+    
+    
+
+    
+        <meta name="_csrf" content="e6863fc6-5f2b-4288-9f0b-0be2197b2ee0"/>
+        <meta name="_csrf_header" content="X-CSRF-TOKEN"/>
+        <meta name="_csrf_parameter" content="_csrf"/>
+    
+
+</head>
+
+<body class="fixed-left">
+
+<!-- Begin page -->
+<div id="wrapper" class="enlarged forced">
+
+    
+    
+    <!-- Top Bar Start -->
+    
+
+
+
+
+<script type="text/javascript" src="/reports/assets/app/pushNotification-26ee6ee35dd9b52934080a70ea04a8fd.js" ></script>
+<script type="text/javascript">
+
+    function logoutRxSession() {
+      clearFormInputsChangeFlag($(document));
+      $.fn.idleTimeout().logout();
+    }
+    var notificationURL = "\u002freports\u002fnotificationRest\u002fforUser\u002f64724";
+    var notificationChannel ="\u002fnotifications\u002f3e8843ccf952745b268862351bb3bef8";
+    var notificationWSURL = "\u002freports\u002fstomp";
+    var viewNotificationErrorURL = "\u002freports\u002fexecutionStatus\u002fviewNotificationError";
+    var notificationDeleteURL = "\u002freports\u002fnotificationRest\u002fdeleteNotificationById";
+    var notificationDeleteByUserURL = "\u002freports\u002fnotificationRest\u002fdeleteNotificationsForUserId";
+    var reportRedirectURL = "\u002freports\u002freport\u002fshowFirstSection";
+    
+    var hasAccessOnActionItem = true;
+    
+    
+
+</script>
+
+
+<div class="topbar">
+    <!-- LOGO -->
+    <div class="pull-left">
+        <button class="button-menu-mobile open-left waves-effect">
+            <i class="md md-menu"></i>
+        </button>
+        <span class="clearfix"></span>
+    </div>
+
+    <div class="topbar-left">
+        <div class="pull-left">
+            
+                <a href="/reports/dashboard/index"><img src="/reports/assets/pvr_logo-4233ea6efeb2ddb09d89415071b55478.png" class="pvLogo"/></a>
+            
+        </div>
+    </div>
+    <!-- Navbar -->
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="">
+                <ul class="nav navbar-nav hidden-xs pull-left">
+                    
+                    
+                    
+                    
+                    
+                        <li><a href="http://10.100.22.24:8181/signal" class="waves-effect">PV Signal</a></li>
+                    
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    
+                        <li class="hidden-xs m-t-10">
+                            <h5 class="text-white login-user-fullname">Welcome perfuser1!</h5>
+                                <small class="text-white last-login-date-time-box"><b>Last Login</b> :  10-Sep-2020 09:39 AM (GMT +00:00)</small>
+                        </li>
+                        
+                        <li id="menuNotification" class="dropdown hidden-xs">
+                                <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light"
+                                   data-toggle="dropdown" aria-expanded="true">
+                                    <i class="md md-notifications"></i> <span
+                                        id="notificationBadge"  class="badge badge-xs badge-pink"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-lg">
+                                    <li id="notificationHeader" class="text-center notifi-title"></li>
+                                    <li id="notificationRows" class="list-group nicescroll notification-list">
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" id="clearNotifications" class=" text-right" userId="64724">
+                                            <small><b>Clear all</b></small>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </li>
+                        <li class="hidden-xs">
+                            <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light"
+                               data-toggle="dropdown" aria-expanded="true">
+                                <i class="md md-settings"></i></a>
+                            <ul class="dropdown-menu topNavMenu">
+                                    
+                                <li id="help"><a href="/reports/dashboard/index" target="_blank"><i class="md md-help"></i> Help</a></li>
+
+                                
+                                    <li id="executionStatus"><a href="/reports/executionStatus/list"><i class="md md-alarm"></i> Execution Status</a></li>
+                                
+
+                                
+                                    <li class="divider"></li>
+                                    
+                                    <li id="userManagement"><a href="/reports/user/index">User Management</a></li>
+                                    <li id="userManagement"><a href="/reports/userGroup/index">Group Management</a></li>
+                                    <li id="roleManagement"><a href="/reports/role/index">Role Management</a></li>
+                                    
+                                    
+                                        <li id="fieldManagement"><a href="/reports/reportField/index">Field Management</a></li>
+                                        <li id="jsonDownloaded"><a href="/reports/queryTemplateJSON/index">Download JSONs</a> </li>
+                                    
+                                    
+                                        <li id="customField"><a href="/reports/customField/index">Custom Fields</a></li>
+                                    
+                                    
+                                    <li id="userManagement"><a href="/reports/dashboardDictionary/index">Dashboards</a></li>
+                                    
+                                    
+                                    <li id="userManagement"><a href="/reports/fieldProfile/index">Field Profile</a></li>
+                                    <li id="sourceProfileManagement"><a href="/reports/sourceProfile/index">Source Profile</a></li>
+                                    <li id="workflowState"><a href="/reports/workflowState/index">Workflow State</a></li>
+                                    <li id="workflowRule"><a href="/reports/workflowRule/index">Workflow Rule</a></li>
+                                    <li id="reportRequestType"><a href="/reports/reportRequestType/index">Report Request Settings</a></li>
+                                    <li id="taskTemplate"><a href="/reports/taskTemplate/index">Task Template</a></li>
+                                
+                                    <li id="etlScheduler"><a href="/reports/etlSchedule/index">ETL Scheduler</a></li>
+                                    <li id="auditLog"><a href="/reports/auditLog/index">Audit Log</a></li>
+                                    <li id="controlPanel"><a href="/reports/controlPanel/index">Control Panel</a></li>
+                                    <li id="reportFooter"><a href="/reports/reportFooter/index">Footer Configuration</a></li>
+                                    <li id="reportFooter"><a href="/reports/email/index">Email Configuration</a></li>
+                                    <li id="reportFooter"><a href="/reports/emailTemplate/index">Email Template</a></li>
+                                    
+                                    
+                                    <li class="divider"></li>
+                                
+
+                                <li id="menuPreference"><a href="/reports/preference/index"><i class="md md-settings"></i> Preferences</a></li>
+
+                                
+                                    <li class="divider"></li>
+
+                                    
+                                    <li><a href="/reports/monitoring">Monitoring</a></li>
+                                    <li><a href="/reports/quartz">Jobs Monitoring</a></li>
+                                
+
+                                <li class="divider"></li>
+
+                                <li>
+                                    <a href="javascript:void(0);" onclick="logoutRxSession();" type="button"><i class="md md-exit-to-app"></i> Logout</a>
+                            </ul>
+                        </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Top Bar End -->
+
+    <!-- Left Sidebar Start -->
+    
+    
+
+
+<div class="left side-menu">
+    <div class="sidebar-inner slimscrollleft">
+        <div id="sidebar-menu">
+            <ul>
+                <li class="has_sub"><a href="/reports/dashboard/index" class="waves-effect waves-primary"><i
+                        class="md md-dashboard"></i><span>Dashboard</span><span class="menu-arrow"></span></a>
+                    <ul class="list-unstyled">
+                        
+                        <li><a href="/reports/dashboard/newDashboard"><i class="fa fa-plus"></i>New Dashboard</a></li>
+                    </ul>
+                </li>
+                
+                    <li class="has_sub">
+                        <!-- Adhoc Reports -->
+                        <a href="javascript:void(0);" class="waves-effect waves-primary"><i
+                                class="md md-grid-on"></i> <span>Adhoc Reports</span>
+                            <span class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                            
+                                <!-- Load Configurations -->
+                                <li><a href="/reports/configuration/load">Load Configurations</a></li>
+                            
+                            
+                                <!-- New Report -->
+                                <li><a href="/reports/configuration/create">New Report</a></li>
+                            
+                            
+                                <!-- New Report -->
+                                <li><a href="javascript:void(0);"  class="createAdhocFromTemplate">Create From Template</a></li>
+                            
+                            
+                                <!-- Library -->
+                                <li><a href="/reports/configuration/index">Configuration Library</a></li>
+                            
+                            
+                                <!-- Generated Reports -->
+                                <li><a href="/reports/report/index">Generated Reports</a></li>
+                            
+                            
+                                
+                            
+                            
+                                <!-- Bulk Scheduling -->
+                                <li><a href="/reports/configuration/bulkUpdateConfig">Bulk Update</a></li>
+                            
+                        </ul>
+                    </li>
+                
+                
+                    <li class="has_sub">
+                        <!-- Periodic Reports -->
+                        <a href="javascript:void(0);" class="waves-effect waves-primary"><i
+                                class="md md-call-merge"></i><span>Aggregate Reports</span>
+                            <span class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                            
+                                <!-- New Report -->
+                                <li><a href="/reports/periodicReport/create">New Report</a></li>
+                            
+                            
+                                <!-- New Report -->
+                                <li><a href="javascript:void(0);"  class="createAggregateFromTemplate">Create From Template</a></li>
+                            
+                        <!-- Library -->
+                            <li><a href="/reports/periodicReport/index">Configuration Library</a></li>
+                            <!-- Generated Reports -->
+                            <li><a href="/reports/periodicReport/reports">Generated Reports</a></li>
+                            <!-- View Submission History -->
+                            <li><a href="/reports/reportSubmission/index">View Submission History</a></li>
+                            
+                                <!-- Bulk Scheduling -->
+                                <li><a href="/reports/periodicReport/bulkUpdate">Bulk Update</a></li>
+                            
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="has_sub">
+                        <!-- Case Series -->
+                        <a href="javascript:void(0);" class="waves-effect waves-primary"><i class="md md-view-column"></i>
+                            <span>Case Series</span> <span class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                            
+                                <!-- New Case Series -->
+                                <li><a href="/reports/caseSeries/create">New Case Series</a></li>
+                            
+                        <!-- Generated Case Series -->
+                            <li><a href="/reports/caseSeries/index">Configuration Library</a></li>
+                            <!-- Generated Case Series -->
+                            <li><a href="/reports/executedCaseSeries/index">Generated Case Series</a></li>
+                        </ul>
+                    </li>
+                
+                
+                    <!-- Templates -->
+                    <li class="has_sub">
+                        <a href="javascript:void(0);" class="waves-effect waves-primary"><i
+                                class="md md-now-widgets"></i><span>Templates</span> <span
+                                class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                        <li>
+                            
+                                <!-- Load Templates -->
+                                <li><a href="/reports/template/load">Load Templates</a></li>
+                            
+                        <!-- Template Library -->
+                            <li><a href="/reports/template/index">Template Library</a></li>
+                            
+                                <!-- New Case Line Listing Template -->
+                                <li><a href="/reports/template/create?templateType=CASE_LINE">
+                                    New Case Line Listing Template</a></li>
+                                <!-- New Data Tabulation Template -->
+                                <li><a href="/reports/template/create?templateType=DATA_TAB">
+                                    New Data Tabulation Template</a></li>
+                            
+                            
+                                <!-- New Custom SQL Template -->
+                                <li><a href="/reports/template/create?templateType=CUSTOM_SQL">
+                                    New Custom SQL Template</a></li>
+                                <!-- New Non Case Template -->
+                                <li><a href="/reports/template/create?templateType=NON_CASE">
+                                    New Non Case Template</a></li>
+
+                                
+                            
+                            
+                                <!-- New Template Set -->
+                                <li><a href="/reports/template/create?templateType=TEMPLATE_SET">
+                                    New Template Set</a></li>
+                            
+                        </li>
+                        </ul>
+                    </li>
+                
+                
+                    <!-- Queries -->
+                    <li class="has_sub">
+                        <a href="javascript:void(0);" class="waves-effect waves-primary"><i
+                                class="md md-filter-list"></i><span>Queries</span> <span
+                                class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                        <li>
+                            
+                                <!-- Load Queries -->
+                                <li><a href="/reports/query/load">Load Queries</a></li>
+                            
+                        <!-- Query Library -->
+                            <li><a href="/reports/query/index">Query Library</a></li>
+                            
+                                <!-- New Query -->
+                                <li><a href="/reports/query/create">New Query</a></li>
+                            
+                        </li>
+                        </ul>
+                    </li>
+                
+                
+                    <li class="has_sub">
+                        <!-- Data Analysis -->
+                        <a href="javascript:void(0);" class="waves-effect waves-primary"><i class="md md-trending-up"></i>
+                            <span> Data Analysis </span> <span
+                                class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                            <!-- Analysis File Library -->
+                            <li><a href="/reports/dataAnalysis/index">Analysis File Library</a></li>
+                            <!-- New Analysis File -->
+                            <li><a href="/reports/dataAnalysis/create">New Analysis File</a></li>
+                        </ul>
+                    </li>
+                
+                
+                    <li class="has_sub">
+                        <!-- Tasks -->
+                        <a href="javascript:void(0);" class="waves-effect waves-primary"><i
+                                class="md md-assignment"></i><span> Tasks </span> <span
+                                class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                        <!-- Report Requests -->
+                            
+                                <li><a href="/reports/reportRequest/index">Report Requests</a></li>
+                            
+                        <!-- Action Items -->
+                            
+                                <li><a href="/reports/actionItem/index">Action Items</a></li>
+                            
+                        </ul>
+                    </li>
+                
+                
+                    
+                        
+                        
+                                
+                                
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                        
+                    
+                
+                
+                    <!-- PR Calendar -->
+                    <li><a href="/reports/calendar/index" class="waves-effect waves-primary"><i
+                            class="md md-event"></i><span>Calendar</span></a></li>
+
+                
+            </ul>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+    
+</div>
+<div class="modal fade" id="createFromTemplateModal"  data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby=""  aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="rxmain-container"><div class="rxmain-container-inner"><div class="rxmain-container-row rxmain-container-header"><div class="dropdown"><label class="rxmain-container-header-label">Create From Template</label><i class="pull-right md md-close md-lg rxmain-dropdown-settings" data-dismiss="modal"></i></div></div><div class="row rxmain-container-content">
+                <table id="rxTableTemplateConfiguration" class="row-border hover" width="100%">
+                    <thead>
+                    <tr>
+                        <th class="reportNameColumn">Report Name</th>
+                        <th class="reportDescriptionColumn">Description</th>
+                        <th>Date Created</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div></div></div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+    <!-- Left Sidebar End -->
+    
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div id="mainContent" class="content" style="">
+            
+<div class="rxmain-container"><div class="rxmain-container-inner"><div class="rxmain-container-row rxmain-container-header"><div class="dropdown"><label class="rxmain-container-header-label">Execution Status</label><i class="pull-right dropdown-toggle md md-list md-lg rxmain-dropdown-settings" id="dropdownMenu1" data-toggle="dropdown"></i><div class="pull-right dropdown-menu" aria-labelledby="dropdownMenu1"><div class="rxmain-container-dropdown"><div><table id="tableColumns" class="table table-condensed rxmain-dropdown-settings-table"><thead><tr><th>Name</th><th>Show</th></tr></thead></table></div></div></div><i class="pull-right fa fa-filter lib-filter rxmain-dropdown-settings"></i></div></div><div class="row rxmain-container-content">
+    
+
+
+    <div class="alert alert-success alert-dismissible forceLineWrap" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+        </button>
+        <i class="fa fa-check"></i>
+        
+            Your report has been scheduled and will be delivered when it&#39;s complete. Please refresh to check the latest execution status.<br/>
+        
+    </div>
+
+
+
+
+
+
+
+
+    <div class="fuelux outside row">
+        <div class="col-xs-6" id="resultDatepickerFrom">
+            <div class="row form-inline">
+                <div class="col-xs-3 datePickerMargin labelMargin ">
+                    <label class="no-bold">From: </label>
+                </div>
+                <div class="col-xs-9 datePickerMargin">
+                    <div class="input-group">
+                        <input placeholder="Start Date" class="form-control input-sm" id="myResultDatepickerFrom" type="text"/>
+                        <div class="input-group-btn">
+    <button type="button" class="btn btn-primary btn-css dropdown-toggle" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span class="sr-only">Toggle Calendar</span>
+    </button>
+
+    <div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper" role="menu">
+        <div class="datepicker-calendar">
+            <div class="datepicker-calendar-header">
+                <button type="button" class="prev"><span class="glyphicon glyphicon-chevron-left"></span><span
+                        class="sr-only">Previous Month</span></button>
+                <button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"></span><span
+                        class="sr-only">Next Month</span></button>
+                <button type="button" class="title">
+                    <span class="month">
+                        <span data-month="0">January</span>
+                        <span data-month="1">February</span>
+                        <span data-month="2">March</span>
+                        <span data-month="3">April</span>
+                        <span data-month="4">May</span>
+                        <span data-month="5">June</span>
+                        <span data-month="6">July</span>
+                        <span data-month="7">August</span>
+                        <span data-month="8">September</span>
+                        <span data-month="9">October</span>
+                        <span data-month="10">November</span>
+                        <span data-month="11">December</span>
+                    </span> <span class="year"></span>
+                </button>
+            </div>
+            <table class="datepicker-calendar-days">
+                <thead>
+                <tr>
+                    <th>Su</th>
+                    <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="datepicker-calendar-footer">
+                <button type="button" class="datepicker-today">Today</button>
+            </div>
+        </div>
+
+        <div class="datepicker-wheels" aria-hidden="true">
+            <div class="datepicker-wheels-month">
+                <h2 class="header">Month</h2>
+                <ul>
+                    <li data-month="0"><button type="button">Jan</button></li>
+                    <li data-month="1"><button type="button">Feb</button></li>
+                    <li data-month="2"><button type="button">Mar</button></li>
+                    <li data-month="3"><button type="button">Apr</button></li>
+                    <li data-month="4"><button type="button">May</button></li>
+                    <li data-month="5"><button type="button">Jun</button></li>
+                    <li data-month="6"><button type="button">Jul</button></li>
+                    <li data-month="7"><button type="button">Aug</button></li>
+                    <li data-month="8"><button type="button">Sep</button></li>
+                    <li data-month="9"><button type="button">Oct</button></li>
+                    <li data-month="10"><button type="button">Nov</button></li>
+                    <li data-month="11"><button type="button">Dec</button></li>
+                </ul>
+            </div>
+
+            <div class="datepicker-wheels-year">
+                <h2 class="header">Year</h2>
+                <ul></ul>
+            </div>
+
+            <div class="datepicker-wheels-footer clearfix">
+                <button type="button" class="btn datepicker-wheels-back"><span
+                        class="glyphicon glyphicon-arrow-left"></span><span class="sr-only">Return to Calendar</span>
+                </button>
+                <button type="button" class="btn datepicker-wheels-select">Select <span
+                        class="sr-only">Month and Year</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                 </div>
+             </div>
+        </div>
+        <div class="col-xs-6" id="resultDatepickerTo">
+            <div class="row form-inline">
+                <div class="col-xs-2 datePickerMargin labelMargin ">
+                    <label class="no-bold">To: </label>
+                </div>
+                <div class="col-xs-9 datePickerMargin">
+                    <div class="input-group">
+                        <input placeholder="End Date" class="form-control input-sm" id="myResultDatepickerTo" type="text"/>
+                        <div class="input-group-btn">
+    <button type="button" class="btn btn-primary btn-css dropdown-toggle" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span class="sr-only">Toggle Calendar</span>
+    </button>
+
+    <div class="dropdown-menu dropdown-menu-right datepicker-calendar-wrapper" role="menu">
+        <div class="datepicker-calendar">
+            <div class="datepicker-calendar-header">
+                <button type="button" class="prev"><span class="glyphicon glyphicon-chevron-left"></span><span
+                        class="sr-only">Previous Month</span></button>
+                <button type="button" class="next"><span class="glyphicon glyphicon-chevron-right"></span><span
+                        class="sr-only">Next Month</span></button>
+                <button type="button" class="title">
+                    <span class="month">
+                        <span data-month="0">January</span>
+                      
+1fd0
+  <span data-month="1">February</span>
+                        <span data-month="2">March</span>
+                        <span data-month="3">April</span>
+                        <span data-month="4">May</span>
+                        <span data-month="5">June</span>
+                        <span data-month="6">July</span>
+                        <span data-month="7">August</span>
+                        <span data-month="8">September</span>
+                        <span data-month="9">October</span>
+                        <span data-month="10">November</span>
+                        <span data-month="11">December</span>
+                    </span> <span class="year"></span>
+                </button>
+            </div>
+            <table class="datepicker-calendar-days">
+                <thead>
+                <tr>
+                    <th>Su</th>
+                    <th>Mo</th>
+                    <th>Tu</th>
+                    <th>We</th>
+                    <th>Th</th>
+                    <th>Fr</th>
+                    <th>Sa</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div class="datepicker-calendar-footer">
+                <button type="button" class="datepicker-today">Today</button>
+            </div>
+        </div>
+
+        <div class="datepicker-wheels" aria-hidden="true">
+            <div class="datepicker-wheels-month">
+                <h2 class="header">Month</h2>
+                <ul>
+                    <li data-month="0"><button type="button">Jan</button></li>
+                    <li data-month="1"><button type="button">Feb</button></li>
+                    <li data-month="2"><button type="button">Mar</button></li>
+                    <li data-month="3"><button type="button">Apr</button></li>
+                    <li data-month="4"><button type="button">May</button></li>
+                    <li data-month="5"><button type="button">Jun</button></li>
+                    <li data-month="6"><button type="button">Jul</button></li>
+                    <li data-month="7"><button type="button">Aug</button></li>
+                    <li data-month="8"><button type="button">Sep</button></li>
+                    <li data-month="9"><button type="button">Oct</button></li>
+                    <li data-month="10"><button type="button">Nov</button></li>
+                    <li data-month="11"><button type="button">Dec</button></li>
+                </ul>
+            </div>
+
+            <div class="datepicker-wheels-year">
+                <h2 class="header">Year</h2>
+                <ul></ul>
+            </div>
+
+            <div class="datepicker-wheels-footer clearfix">
+                <button type="button" class="btn datepicker-wheels-back"><span
+                        class="glyphicon glyphicon-arrow-left"></span><span class="sr-only">Return to Calendar</span>
+                </button>
+                <button type="button" class="btn datepicker-wheels-select">Select <span
+                        class="sr-only">Month and Year</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table id="rxTableReportsExecutionStatus" class="row-border hover" width="100%">
+        <thead>
+        <tr>
+            <th>Report Name</th>
+            <th>Report Type</th>
+            <th>Version</th>
+            <th>Execution Status</th>
+            <th>Owner</th>
+            <th>Run Date</th>
+            <th>Run Duration</th>
+            <th>Frequency</th>
+            <th>Shared With Users</th>
+            <th>Delivery Media</th>
+        </tr>
+        </thead>
+    </table>
+    <input type="hidden" name="isAdmin" id="isAdmin" value="true" />
+</div></div></div>
+
+<div style="display: none">
+    <div id="sharedWithFilter" class="col-xs-7" style="text-align: right">
+        <label class="no-bold">Shared With</label>
+        <input class="sharedWithControl form-control" id="sharedWithFilterControl" name="sharedWithFilterControl" value="" style="min-width: 100px;">
+    </div>
+</div>
+<script>
+    if("com.rxlogix.config.ExecutionStatus" == "com.rxlogix.config.ExecutionStatus"){
+        sharedWithFilterListUrl = "/reports/userRest/sharedWithUserList";
+    } else {
+        sharedWithFilterListUrl = "/reports/userRest/sharedWithFilterList?clazz=com.rxlogix.config.ExecutionStatus";
+    }
+    sharedWithFilterValuesUrl = "/reports/userRest/sharedWithValues";
+    var sessionStorageSharedWithVariableName = window.location.pathname.replace(/\//g,"")+".sharedWith";
+    $('#sharedWithFilterControl').val(sessionStorage.getItem(sessionStorageSharedWithVariableName)?sessionStorage.getItem(sessionStorageSharedWithVariableName):"");
+    function initSharedWithFilter(tableId,table,width) {
+        var searchDiv = $('#'+tableId+'_filter').parent(),
+            sharedWith = $('#sharedWithFilterControl');
+        searchDiv.find('input').css('height', '40');
+        searchDiv.find('input').attr('placeholder', $.i18n._("fieldprofile.search.label"));
+        searchDiv.find('label').css('margin-bottom', '-2px');
+        searchDiv.attr("class", "col-xs-3");
+        searchDiv.parent().addClass('searchToolbar');
+        searchDiv.before($('#sharedWithFilter'));
+        width = width?width:'250px';
+        bindShareWith(sharedWith, sharedWithFilterListUrl, sharedWithFilterValuesUrl, width).on("change", function (e) {
+            sessionStorage.setItem(sessionStorageSharedWithVariableName, $('#sharedWithFilterControl').val());
+            table.draw();
+        });
+    }
+</script>
+
+<div style="display: none">
+    <div id="reportExecutionStatusDropDown" class="col-xs-3">
+        <label class="no-bold">Status</label>
+        <select name="submissionFilter" class="form-control" style="text-align-last: center; width: 80%" id="reportExecutionStatusControl" >
+<option value="GENERATING" selected="selected" >In Progress</option>
+<option value="BACKLOG" >Queue</option>
+<option value="SCHEDULED" >Scheduled</option>
+<option value="COMPLETED" >Completed</option>
+<option value="ERROR" >Error</option>
+</select>
+    </div>
+</div>
+<script>
+    function initReportExeuctionStatusDropDown(tableId,table) {
+        var searchDiv = $('#'+tableId+'_filter').parent(),
+            statusDropDown = $('#reportExecutionStatusControl')
+        searchDiv.find('input').css('height', '40');
+        searchDiv.find('label').css('margin-bottom', '-2px');
+        searchDiv.attr("class", "col-xs-3");
+        searchDiv.parent().addClass('searchToolbar');
+        searchDiv.before($('#reportExecutionStatusDropDown'));
+    }
+</script>
+
+        </div>
+        <!-- End content -->
+    
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Right content here -->
+    <!-- ============================================================== -->
+</div>
+<script type="text/javascript" src="/reports/assets/app/jquery.core-2c7cdf128b42d849235dea8cadd879b8.js" ></script>
+<script type="text/javascript" src="/reports/assets/app/jquery.app-782d8f87ac279a019b37b18a315654b2.js" ></script>
+
+    
+
+
+
+<script type="text/javascript" src="/reports/assets/store.modern.min-ee86dbde67356086e53dffdd31c6867d.js" ></script>
+<script type="text/javascript" src="/reports/assets/jquery/customise-jquery-idleTimeout-6286fe026bdf78a6c38a29cfd8d979c8.js" ></script> 
+<script type="text/javascript">
+
+    $(document).ready(function() {
+      $(document).idleTimeout({
+      redirectUrl:  "https:\u002f\u002fpvr-perf.rxlogix.com\u002freports/logout",
+      idleTimeLimit: 1800,
+      sessionKeepAliveUrl: "https:\u002f\u002fpvr-perf.rxlogix.com\u002freports/keep-alive",
+      sessionKeepAliveTimer: 60,
+      enableDialog: true,
+      dialogDisplayLimit: 300,
+      activityEvents: 'click keypress',
+      customCallback: function() {
+          var forms = $('form');
+            if(forms.find('.changed-input').length){
+                alert($.i18n._('navigateAwayChangesLostMessage'));
+                clearFormInputsChangeFlag(forms);
+            }
+      }
+      });
+    });
+
+</script>
+
+
+</body>
+</html>
+
+0
+

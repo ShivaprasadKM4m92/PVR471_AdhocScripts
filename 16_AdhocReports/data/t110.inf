@@ -1,0 +1,11 @@
+[t110]
+FileName1=t110_plugin.min.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/tinymce/plugins/link/plugin.min.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_110.xml
+RequestHeaderFile=t110_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t110_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
