@@ -1,0 +1,11 @@
+[t62]
+FileName1=t62_templateQueries-40bbfd6232c6e3d39d5c0d24d8198ac6.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/app/configuration/templateQueries-40bbfd6232c6e3d39d5c0d24d8198ac6.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_62.xml
+RequestHeaderFile=t62_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t62_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

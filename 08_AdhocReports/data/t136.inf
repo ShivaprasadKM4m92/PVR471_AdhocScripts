@@ -1,0 +1,11 @@
+[t136]
+FileName1=t136_pvr-common-util-c530da31e318f4a1f8ebc65324b8ce1f.html
+URL1=https://pvr-perf.rxlogix.com/reports/assets/app/utils/pvr-common-util-c530da31e318f4a1f8ebc65324b8ce1f.js
+Total=1
+ContentType=application/javascript
+SnapshotXmlFile=snapshot_136.xml
+RequestHeaderFile=t136_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t136_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
